@@ -737,22 +737,26 @@ div.highlightTextIn a:before
 	 opacity: 0;
 	 animation: load-out 660ms ease-out forwards;
 }
- /* .loadmore {
-	 margin: 3rem auto;
-	 padding: 0.8rem 3rem;
+  .loadmore {
+     justify-content: center;
+     align-items: center;
+     text-align: center;
+	 /* margin: 3rem auto;
+	 padding: 0.8rem 3rem; */
 	 position: relative;
 	 overflow: hidden;
 	 display: block;
-	 font-family: 'Poppins', sans-serif;
+     font-family: 'Orbitron', sans-serif;
+     /* font-family: 'Press Start 2P', cursive; */
 	 font-weight: 600;
-	 font-size: 1rem;
-	 background: linear-gradient(to right, rgba(255, 40, 222, .9), rgba(89, 0, 255, .9));
+	 font-size: 1.2rem;
+	 /* background: linear-gradient(to right, rgba(218, 218, 218, 0.9), rgba(0, 0, 0, 0.9)); */
 	 color: white;
-	 border: 3px solid white;
-	 border-radius: 30px;
+	 border: 2px solid white;
 	 transition: all 660ms cubic-bezier(0.075, 0.82, 0.165, 1);
-} */
- /* .loadmore:hover, .loadmore:focus, .loadmore:active {
+     text-decoration: none;
+} 
+  .loadmore:hover, .loadmore:focus, .loadmore:active {
 	 cursor: pointer;
 	 color: #fff;
 	 transition: all 660ms cubic-bezier(0.075, 0.82, 0.165, 1);
@@ -772,13 +776,13 @@ div.highlightTextIn a:before
 	 z-index: 10000;
 	 transform: skew(-25deg);
 	 transform-origin: right;
-	 background: rgba(255, 40, 222, .9);
+	 background: rgba(73, 71, 73, 0.9);
 	 transition: width 1200ms cubic-bezier(0.075, 0.82, 0.165, 1);
-} */
- .hidden {
+} 
+ /* .hidden {
 	 height: 0;
 	 position: absolute;
 	 transform: translateY(-1rem);
 	 opacity: 0;
 }
- 
+  */
