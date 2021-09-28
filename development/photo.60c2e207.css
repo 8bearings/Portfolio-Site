@@ -1,5 +1,4 @@
 @import 'https://fonts.googleapis.com/css?family=Raleway';
-@import url('https://fonts.googleapis.com/css?family=Raleway:900&display=swap');
 
 html, body
 {
@@ -40,10 +39,6 @@ div.container
     margin: 0 auto;
 	padding: 3em 3em;
 	text-align: center;
-    /* keep at top */
-    position: fixed;
-    top: 1px;
-    width: 100%;
 }
 
 div.container a
@@ -530,27 +525,267 @@ div.highlightTextIn a:before
     transform: scale(1.2);
 } 
 
-
-/* Morph */
-#container {
-	/* Center the text in the viewport. */
-	position: absolute;
-	width: 100%;
-	/* This filter is a lot of the magic, try commenting it out to see how the morphing works! */
-	filter: url(#threshold) blur(.6px);
+/* Photo Grid */
+#Photo{
+    border: ridge rgb(180, 180, 180);
+    
 }
-
-/* Your average text styling */
-#text1, #text2 {
-    position: absolute;
-	width: 100%;
-	display: flex;
-	font-family: Raleway;
-	font-size: 4em;
-	color: rgb(0, 0, 0);
-	user-select: none;
-    font-weight: 900;
-    text-align: center;
-    margin-left: 5%;
-    margin-top: 5%;
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
+ body {
+	 margin: 0;
+	 background: linear-gradient(to bottom right, rgba(146, 146, 146, 0.9), rgba(0, 0, 0, 0.9)), url("https://live.staticflickr.com/1605/24113267180_97bab74e75_o.jpg");
+	 background-repeat: no-repeat;
+	 background-size: cover;
+	 font-family: 'Orbitron', sans-serif;
+    /* font-family: 'Press Start 2P', cursive; */
+	 font-size: 20%;
+	 color: rgb(0, 0, 0);
 }
+ .grid {
+    margin: 0 auto;
+	 margin: 1rem;
+	 width: calc(100% - 2rem);
+	 display: grid;
+	 grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
+	 grid-gap: 1rem;
+	 /* grid-auto-rows: 250px; */
+	 grid-auto-flow: row dense;
+	 opacity: 0;
+	 animation: load-in 2000ms ease-out forwards;
+}
+ @media screen and (min-width: 382px) {
+	 .grid {
+		 grid-template-columns: repeat(auto-fit, minmax(325px, 1fr))
+	}
+}
+ .grid.loading {
+	 animation-play-state: paused !important;
+}
+ @keyframes load-in {
+	 100% {
+		 opacity: 1;
+	}
+}
+ @keyframes load-out {
+	 100% {
+		 opacity: 0;
+	}
+}
+ .intro {
+	 grid-column: -1;
+	 grid-row-end: span 2;
+	 width: 100%;
+	 position: relative;
+	 align-self: center;
+}
+ .intro > * {
+	 max-width: 1000px;
+	 text-align: left;
+}
+ .intro > h1 {
+	 margin: -1rem auto 0 auto;
+	 font-size: 2.2rem;
+	 font-weight: 700;
+	 line-height: 1.5;
+}
+ .intro > p {
+	 margin: 0 auto;
+	 font-size: .6rem;
+	 font-weight: 300;
+	 line-height: 1.6;
+}
+ .regular {
+	 height: auto;
+	 width: auto;
+	 position: relative;
+	 transform: none;
+	 overflow: hidden;
+	 transition: opacity 1000ms ease-in-out, transform 800ms ease-in-out;
+	 box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+}
+ .regular:hover .img, .regular:focus .img {
+	 transform: scale(1.05);
+	 transition: all 220ms ease-in-out;
+}
+ .regular:hover .overlay, .regular:focus .overlay {
+	 background-color: rgba(13, 13, 13, .6);
+	 transition: all 220ms ease-in-out;
+}
+ .regular:hover .text, .regular:focus .text {
+	 opacity: 1;
+	 transition: opacity 330ms ease-in-out;
+}
+ .text {
+	 position: absolute;
+	 top: 45%;
+	 left: 50%;
+	 z-index: 4;
+	 transform: translate(-50%, -50%);
+	 text-align: center;
+	 opacity: 0;
+	 transition: opacity 220ms ease-in-out;
+}
+ .text > p {
+	 font-weight: 800;
+	 font-size: .8rem;
+	 line-height: 1.25;
+}
+ .text > a {
+	 font-size: .6rem;
+	 text-decoration: none;
+	 font-weight: 400;
+	 line-height: 1.5;
+	 border-bottom: 2px solid #fff;
+	 color: #fff;
+	 transition: all 220ms ease-in-out;
+}
+ .text > a:hover {
+	 cursor: pointer;
+	 color: #ff28de;
+	 border-color: #ff28de;
+	 transition: all 220ms ease-in-out;
+}
+ .overlay {
+	 height: 100%;
+	 width: 100%;
+	 position: absolute;
+	 top: 0;
+	 left: 0;
+	 z-index: 3;
+	 transition: all 220ms ease-in-out;
+}
+ .img {
+	 width: 100%;
+	 height: 100%;
+	 object-fit: cover;
+	 transition: all 220ms ease-in-out;
+}
+ @media screen and (min-width: 767px) {
+	 .tall {
+		 grid-row-end: span 2;
+	}
+	 .wide {
+		 grid-column-end: span 2;
+	}
+	 .intro h1 {
+		 font-size: 2.8rem;
+	}
+	 .intro p {
+		 font-size: .9rem;
+	}
+}
+ .spinner {
+	 margin: 0;
+	 position: fixed;
+	 z-index: 999;
+	 display: block;
+	 width: 100%;
+	 height: 100vh;
+}
+ .spinner .circle {
+	 margin: 1rem;
+	 height: 5rem;
+	 width: 5rem;
+	 position: absolute;
+	 top: 30%;
+	 left: 50%;
+	 transform: translate(-50%, -50%) scale(1);
+	 border: 1rem solid rgba(255, 255, 255, 0);
+	 border-radius: 4rem;
+}
+ .spinner .circle.first {
+	 border-top-color: rgba(232, 232, 232, .7);
+	 animation: spin--1 2500ms infinite;
+}
+ .spinner .circle.second {
+	 border-bottom-color: rgba(232, 232, 232, .7);
+	 animation: spin--2 2500ms infinite;
+}
+ @keyframes spin--1 {
+	 33% {
+		 transform: translate(-50%, -50%) rotateZ(0deg);
+	}
+	 100% {
+		 transform: translate(-50%, -50%) rotateZ(720deg);
+	}
+}
+ @keyframes spin--2 {
+	 0% {
+		 transform: translate(-50%, -50%) rotateZ(0deg);
+	}
+	 33% {
+		 transform: translate(-50%, -50%) rotateZ(90deg);
+	}
+	 100% {
+		 transform: translate(-50%, -50%) rotateZ(720deg);
+	}
+}
+ @keyframes spinner {
+	 0% {
+		 transform: rotateZ(0deg) scale(1);
+	}
+	 33% {
+		 transform: rotateZ(180deg) scale(0.8);
+	}
+	 100% {
+		 transform: rotateZ(720deg) scale(1);
+	}
+}
+ .hide {
+	 height: 0;
+	 width: 0;
+	 overflow: hidden;
+	 opacity: 0;
+	 animation: load-out 660ms ease-out forwards;
+}
+  .loadmore {
+     justify-content: center;
+     align-items: center;
+     text-align: center;
+	 /* margin: 3rem auto;
+	 padding: 0.8rem 3rem; */
+	 position: relative;
+	 overflow: hidden;
+	 display: block;
+     font-family: 'Orbitron', sans-serif;
+     /* font-family: 'Press Start 2P', cursive; */
+	 font-weight: 600;
+	 font-size: 1.2rem;
+	 /* background: linear-gradient(to right, rgba(218, 218, 218, 0.9), rgba(0, 0, 0, 0.9)); */
+	 color: white;
+	 border: 2px solid white;
+	 transition: all 660ms cubic-bezier(0.075, 0.82, 0.165, 1);
+     text-decoration: none;
+} 
+  .loadmore:hover, .loadmore:focus, .loadmore:active {
+	 cursor: pointer;
+	 color: #fff;
+	 transition: all 660ms cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+ .loadmore:hover::after, .loadmore:focus::after, .loadmore:active::after {
+	 width: 150%;
+	 left: -10px;
+	 transform-origin: left;
+}
+ .loadmore::after {
+	 content: "";
+	 width: 0%;
+	 height: 100%;
+	 position: absolute;
+	 top: 0;
+	 right: -10px;
+	 z-index: 10000;
+	 transform: skew(-25deg);
+	 transform-origin: right;
+	 background: rgba(73, 71, 73, 0.9);
+	 transition: width 1200ms cubic-bezier(0.075, 0.82, 0.165, 1);
+} 
+ /* .hidden {
+	 height: 0;
+	 position: absolute;
+	 transform: translateY(-1rem);
+	 opacity: 0;
+}
+  */
+
+/*# sourceMappingURL=/photo.60c2e207.css.map */

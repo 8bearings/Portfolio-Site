@@ -537,11 +537,12 @@ div.highlightTextIn a:before
 	 background-repeat: no-repeat;
 	 background-size: cover;
 	 font-family: 'Orbitron', sans-serif;
-    font-family: 'Press Start 2P', cursive;
+    /* font-family: 'Press Start 2P', cursive; */
 	 font-size: 20%;
-	 color: white;
+	 color: rgb(0, 0, 0);
 }
  .grid {
+    margin: 0 auto;
 	 margin: 1rem;
 	 width: calc(100% - 2rem);
 	 display: grid;
@@ -554,7 +555,7 @@ div.highlightTextIn a:before
 }
  @media screen and (min-width: 382px) {
 	 .grid {
-		 grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+		 grid-template-columns: repeat(auto-fit, minmax(325px, 1fr))
 	}
 }
  .grid.loading {
