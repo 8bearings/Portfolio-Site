@@ -39,6 +39,8 @@ div.container
     margin: 0 auto;
 	padding: 3em 3em;
 	text-align: center;
+/* keep sticky */
+   
 }
 
 div.container a
@@ -497,7 +499,7 @@ div.highlightTextOut a
 div.highlightTextOut a:before, div.highlightTextIn a:before
 {
     position: absolute;
-    color: #FFF;
+    color: #92e6ff;
     top: 0px;
     left: 0px;
     padding: 10px;
@@ -527,7 +529,7 @@ div.highlightTextIn a:before
 
 /* Photo Grid */
 #Photo{
-    border: ridge rgb(180, 180, 180);
+    border: ridge #92e6ff;
     
 }
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
@@ -752,8 +754,7 @@ div.highlightTextIn a:before
 	 font-weight: 600;
 	 font-size: 1.2rem;
 	 /* background: linear-gradient(to right, rgba(218, 218, 218, 0.9), rgba(0, 0, 0, 0.9)); */
-	 color: white;
-	 border: 2px solid white;
+	 color: rgb(187, 187, 187);
 	 transition: all 660ms cubic-bezier(0.075, 0.82, 0.165, 1);
      text-decoration: none;
 } 
