@@ -105,14 +105,14 @@ const text = document.querySelector('.typing-text');
 // make a words array
 const words = [
     "Elliott Watson",
-    	"Software Engineer",
+    	"Software Engineer.",
         "Elliott Watson",
-    	"Web Developer",
+    	"Web Developer.",
         "Elliott Watson",
-    	"Photographer",
+    	"Photographer.",
         "Elliott Watson",
-    	"Full Stack Engineer",
-        "Elliott Watson",
+    	"Full Stack Engineer.",
+        
 ];
 
 // start typing effect
@@ -176,3 +176,8 @@ function setTyper(element, words) {
   }
 }
 })
+
+AOS.init({
+    duration: 800,
+    once: true
+  });
