@@ -177,7 +177,10 @@ function setTyper(element, words) {
 }
 })
 
-AOS.init({
-    duration: 800,
-    once: true
-  });
+// AOS.init({
+//     duration: 800,
+//     once: true
+//   });
+
+
+  

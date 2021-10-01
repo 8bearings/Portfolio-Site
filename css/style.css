@@ -7,7 +7,7 @@ html, body
     background-color: #ffffff;
 }
 body {
-    animation: fadeInAnimation ease 2s;
+    animation: fadeInAnimation ease 3.5s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 }
@@ -63,8 +63,8 @@ div.container a
 {
     color: rgb(133, 133, 133);
     text-decoration: none;
-    font: 20px Raleway;
-    margin: 0px 10px;
+    font: 1.4em Raleway;
+    margin: 0px 20px;
     padding: 10px 10px;
     position: relative;
     z-index: 0;
@@ -590,11 +590,14 @@ div.highlightTextIn a:before
 /* typing text */
 
 .typing-text{
-    width: 100%;
+    position: absolute;
+    top:8.1%;
+    width: 70%;
     font-family: Raleway;
     font-weight: 700;
-    /* text-align: center; */
-    font-size: 5em;
+    text-align: center;
+    right: 35%;
+    font-size: 4.3em;
     color: rgb(241, 241, 241);
     
     /* -webkit-text-stroke: .6px rgb(108, 213, 255); */
@@ -1044,7 +1047,7 @@ div.highlightTextIn a:before
     }
 
     .column-md-4 {
-      grid-column-start: span 4;
+      /* grid-column-start: span 4; */
       grid-column-end: span 4;
     }
 
@@ -1156,7 +1159,20 @@ div.highlightTextIn a:before
 *::before, *::after {
   box-sizing: border-box;
 }
-
+.projectTitle{
+    background-color: #9e9e9e;
+    width: 40%;
+    font-weight: 600;
+    text-align: center;
+    margin: 0 auto;
+    border-radius: 4%;
+    color:  #2b2b2b;
+}
+.projectText{
+    font-size: .8em;
+    padding: 0;
+    margin: 0;
+}
 body {
   font-family: "Muli", sans-serif;
   font-size: 1rem;
@@ -1172,14 +1188,15 @@ body {
 h1,
 h2,
 h3 {
-  font-family: "Old Standard TT", serif;
-  line-height: 1.1;
+  /* font-family: "Old Standard TT", serif; */
+  line-height: 1.2;
+  font-weight: 560;
 }
 
 h2,
 h3 {
-  color: #282828;
-  font-weight: 400;
+  color: #2b2b2b;
+  /* font-weight: 400; */
 }
 
 h1 {
@@ -1277,8 +1294,14 @@ nav .grid > [class*=column-] {
 .container {
   margin: auto;
   padding: 0 1rem;
-  max-width: 68rem;
+  /* max-width: 68rem; */
   width: 100%;
+}
+.firstContainer {
+    margin: auto;
+    padding: 0 1rem;
+    /* max-width: 68rem; */
+    width: 150%;
 }
 
 header {
@@ -1307,6 +1330,7 @@ img {
 }
 .main-img{
     opacity: 0.65;
+    width: 50%;
 }
 #about.grid{
     background-color: #9e9e9e;
@@ -1475,10 +1499,11 @@ footer section {
   .main-img {
     /* width: 100%;
     height: 80vh; */
-    width: 97.5%;
+    width: 84.5%;
     height: 29vh;
     /* padding-left: 10%; */
-    margin-left: 5%;
+    margin-left: 13%;
+    
   }
 
   #about img {
@@ -1506,3 +1531,60 @@ footer section {
 [data-aos=reveal-bottom].aos-animate {
   transform: scaleY(0);
 }
+.bottomCat{
+    width: 70%;
+    font-size: .5em;
+    /* letter-spacing: 0.00; */
+    padding: 2%;
+    margin: 0;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: 500;
+}
+/* Hover Cards */
+#static {
+    position:absolute;
+    background: white;
+  }
+  
+  #static:hover {
+    opacity:0;
+  }
+@media screen and (max-width: 600px) {
+    .typing-text{
+        position: absolute;
+        top:8.1%;
+        width: 100%;
+        font-family: Raleway;
+        font-weight: 700;
+        text-align: center;
+        right: 0.5%;
+        font-size: 2.9em;
+        color: rgb(241, 241, 241);
+        
+        /* -webkit-text-stroke: .6px rgb(108, 213, 255); */
+    }
+    .main-img {
+        /* width: 100%;
+        height: 80vh; */
+        width: 61.5%;
+        height: 10vh;
+        /* padding-left: 10%; */
+        margin-left: 1%;
+        
+      }
+      .highlightTextIn > a{
+        font-size: .3em;
+        width: fit-content;
+      }
+      div.container a {
+        /* color: rgb(133, 133, 133); */
+        text-decoration: none;
+        font: 1em Raleway;
+        margin: 0px 6px;
+        padding: 10px 10px;
+        position: relative;
+        z-index: 0;
+        cursor: pointer;
+    }
+  }
+  
