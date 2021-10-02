@@ -627,6 +627,9 @@ div.highlightTextIn a:before
 	 opacity: 0;
 	 transition: opacity 220ms ease-in-out;
 }
+p{
+    color: white;
+}
  .text > p {
 	 font-weight: 800;
 	 font-size: .8rem;
@@ -643,7 +646,7 @@ div.highlightTextIn a:before
 }
  .text > a:hover {
 	 cursor: pointer;
-	 color: #ff28de;
+	 color: #92e6ff;
 	 border-color: #ff28de;
 	 transition: all 220ms ease-in-out;
 }

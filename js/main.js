@@ -182,5 +182,10 @@ function setTyper(element, words) {
 //     once: true
 //   });
 
+// Social Media Icons
+// social
 
+document.
+querySelectorAll("a").
+forEach(el => el.addEventListener("click", ev => ev.preventDefault()));
   
