@@ -33,7 +33,43 @@ function removeHidden() {
   } else if (seventhHidden.classList.contains('hidden')) {
     seventhHidden.classList.remove('hidden');
   }
-}
+
 
 // Body
 
+// // remove hidden
+// document.getElementById("removeHidden").onclick = removeHidden()
+
+// function removeHidden() {
+//   var hidden = document.querySelectorAll(".hidden");
+//   for (var i = 0; i < hidden.length; i++) {
+//     hidden[i].classList.remove("hidden");
+//   }
+
+// }
+// }
+
+//Lazy Load
+
+// if(!!window.IntersectionObserver){
+// 	let observer = new IntersectionObserver((entries, observer) => { 
+// 		entries.forEach(entry => {
+// 		if(entry.isIntersecting){
+// 			console.log(entry);
+// 			entry.target.src = entry.target.dataset.src;
+// 			observer.unobserve(entry.target);
+// 		}
+// 		});
+// 	}, {rootMargin: "0px 0px -200px 0px"});
+// 	document.querySelectorAll('img').forEach(img => { observer.observe(img) });
+// }
+
+// else document.querySelector('#warning').style.display = 'block';
+// Social Media Icons
+// social
+
+document.
+querySelectorAll("a").
+forEach(el => el.addEventListener("click", ev => ev.preventDefault()));
+  
+}

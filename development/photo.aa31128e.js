@@ -149,8 +149,40 @@ function removeHidden() {
     sixthHidden.classList.remove('hidden');
   } else if (seventhHidden.classList.contains('hidden')) {
     seventhHidden.classList.remove('hidden');
-  }
-} // Body
+  } // Body
+  // // remove hidden
+  // document.getElementById("removeHidden").onclick = removeHidden()
+  // function removeHidden() {
+  //   var hidden = document.querySelectorAll(".hidden");
+  //   for (var i = 0; i < hidden.length; i++) {
+  //     hidden[i].classList.remove("hidden");
+  //   }
+  // }
+  // }
+  //Lazy Load
+  // if(!!window.IntersectionObserver){
+  // 	let observer = new IntersectionObserver((entries, observer) => { 
+  // 		entries.forEach(entry => {
+  // 		if(entry.isIntersecting){
+  // 			console.log(entry);
+  // 			entry.target.src = entry.target.dataset.src;
+  // 			observer.unobserve(entry.target);
+  // 		}
+  // 		});
+  // 	}, {rootMargin: "0px 0px -200px 0px"});
+  // 	document.querySelectorAll('img').forEach(img => { observer.observe(img) });
+  // }
+  // else document.querySelector('#warning').style.display = 'block';
+  // Social Media Icons
+  // social
+
+
+  document.querySelectorAll("a").forEach(function (el) {
+    return el.addEventListener("click", function (ev) {
+      return ev.preventDefault();
+    });
+  });
+}
 },{}],"node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
@@ -179,7 +211,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "64549" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "56628" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
