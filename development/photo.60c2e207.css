@@ -1128,4 +1128,67 @@ p{
     background: none;
 }
 
+@media screen and (max-width: 550px) {
+    .highlightTextIn > a{
+        font-size: .5em;
+        width: fit-content;
+      }
+
+      #Photo{
+        width: 100%;
+        border: ridge #92e6ff;
+        
+    }
+    .grid {
+        margin: 0 auto;
+         margin: 1rem;
+         /* width: 100%; */
+         display: grid;
+         grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
+         grid-gap: .8rem;
+         /* grid-auto-rows: 250px; */
+         grid-auto-flow: row dense;
+         opacity: 0;
+         animation: load-in 1000ms ease-out forwards;
+    }
+    .intro > h1 {
+        margin: -1rem auto 0 auto;
+        font-size: 1.5rem;
+        font-weight: 700;
+        line-height: 1.2;
+    }
+      div.container a {
+        /* color: rgb(133, 133, 133); */
+        text-decoration: none;
+        font: .95em Raleway;
+        margin: 0px .5px;
+        padding: 10px 10px;
+        position: relative;
+        z-index: 0;
+        cursor: pointer;
+    }
+    .soc {
+        display: block;
+        font-size: 0;
+        list-style: none;
+        margin: 0 auto;
+        text-align: center;
+        width: 100%;
+        max-width: 100%;
+        padding: 0%;
+       }
+       .within{
+           width: 100%;
+           text-transform: capitalize;
+           font-size: 1.1em;
+           color: #92e6ff;
+           text-align: center;
+           padding-right: 1%;
+       }
+       .soc a {
+        height: 5.6rem;
+        width: 2.6rem;
+    }
+ }
+
 /*# sourceMappingURL=/photo.60c2e207.css.map */
