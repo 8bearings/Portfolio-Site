@@ -1360,7 +1360,7 @@ img {
 .within{
     width: 100%;
     text-transform: capitalize;
-    font-size: 1.3em;
+    font-size: .95em;
     color: #92e6ff;
     text-align: center;
     padding-right: 11%;
