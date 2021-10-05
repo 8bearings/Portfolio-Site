@@ -677,10 +677,11 @@ p{
 		 grid-column-end: span 2;
 	}
 	 .intro h1 {
-		 font-size: 2.8rem;
+		 font-size: 1.5rem;
 	}
 	 .intro p {
-		 font-size: .9rem;
+		 font-size: .5rem;
+         text-align: left;
 	}
 }
  .spinner {
@@ -845,8 +846,8 @@ p{
 }
 
 .soc a {
-	height: 5.6rem;
-	width: 5.6rem;
+	height: 3.6rem;
+	width: 3.6rem;
 }
 
 .icon-1:hover, .icon-2:hover, .icon-3:hover, .icon-4:hover, .icon-5:hover, .icon-6:hover, .icon-7:hover, .icon-8:hover, .icon-9:hover, .icon-10:hover, .icon-11:hover, .icon-12:hover, .icon-13:hover, .icon-14:hover, .icon-15:hover, .icon-16:hover, .icon-17:hover, .icon-18:hover, .icon-19:hover, .icon-20:hover, .icon-21:hover, .icon-22:hover, .icon-23:hover, .icon-24:hover, .icon-25:hover, .icon-26:hover, .icon-27:hover, .icon-28:hover, .icon-29:hover, .icon-30:hover, .icon-31:hover, .icon-32:hover {
@@ -1153,7 +1154,7 @@ p{
     }
     .intro > h1 {
         margin: -1rem auto 0 auto;
-        font-size: 1.5rem;
+        font-size: 1.3rem;
         font-weight: 700;
         line-height: 1.2;
     }
