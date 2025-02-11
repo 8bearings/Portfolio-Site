@@ -12,7 +12,7 @@
 </head>
 <body>
   
-  <header>
+  <header class="header-top">
     <div class="container gray highlightTextIn">
         <a href="#top" alt="HOME">HOME</a>
         <a href="#about" alt="ABOUT">ABOUT</a>
@@ -74,17 +74,10 @@
 <header>
   <div class="firstContainer">
     <section class="grid intro" id="belowHead">
-      <div class="column-xs-12 column-md-4">
-        <div class="info">
-          <h1 class="typing-text"></h1> 
-          <!-- <p class="lead">Lorem ipsum dolor amet palo santo polaroid readymade coffee.</p> -->
-          <!-- <a class="btn fill" href="#">WELCOME</a> -->
-        </div>
-      </div>
-      <div class="column-xs-12 column-md-8">
+      <div class="column-xs-12 column-md-12"> 
         <div class="image-holder">
-          <div class="image-block" data-aos="reveal-bottom"></div>
           <img class="main-img" src="imgs/Optimized Pics/R6__5512-min.jpg">
+          <h1 class="typing-text"></h1> 
         </div>
       </div>
     </section>
@@ -99,36 +92,46 @@
           <img class="bioPic" src="imgs/Optimized Pics/R6__5659-min.jpg">
         </div>
       </div>
-      <div class="column-xs-12 column-md-6">
-        <h2 name="about">About Me</h2>
-        <p class="bio">Hello! My name is Elliott. I am a results-driven software engineer specializing in backend development and cloud technologies. Experienced in creating scalable solutions using TypeScript, JavaScript, Node.js, and AWS, focusing on performance optimization and robust monitoring.</p>
-        
-        <p class="bio">Key achievements include implementing systems serving millions of users and significantly improving application efficiency. I have experience incorporating large-scale data integration and translating complex requirements into real solutions.</p>
-        
-        <p class="bio">AWS Certified Cloud Practitioner committed to continuous learning. Thrives in collaborative, Agile environments and is passionate about creating impactful, user-centric solutions:</p>
-        <p class="within">TypeScript • AWS • SQL • Node.js • React.js</p>
-      </div>
-    </section>
-    <section id="blog" class="grid">
-      <div class="column-xs-12 text-center">
-        <a name="projects"></a>
-        <h2 class= "projectTitle">Past Projects</h2>
-      </div>
+        <div class="column-xs-12 column-md-6">
+          <h2 name="about">About Me</h2>
+          <p class="bio">Software engineer with 3+ years of experience in full-stack development and cloud infrastructure with proven success optimizing ETL systems.</p>
+          <p class="within">TypeScript • React • AWS • SQL • Node </p>
+        </div>
+      </section>
+      
+      <section id="blog" class="grid">
+        <div class="column-xs-12 text-center">
+          <a name="projects"></a>
+          <h2 class= "projectTitle">Past Projects</h2>
+        </div>
+        <div class="column-xs-12 column-sm-4">
+          <a href="https://8bearings.github.io/Anime-Site/">
+            <figure>
+              <img id="static" src="imgs/AnimeFinder.png">
+              <img id="gifs" src="imgs/AnimeFinder.gif">
+              
+              <figcaption >
+                <h4 class="category">Anime Finder</h4>
+                <h3 class="projectText">A website built with React and TypeScript that allows you to find and add anime shows to a favorites page.</h3>
+              </figcaption>
+            </figure>
+          </a>
+        </div>
       <div class="column-xs-12 column-sm-4">
-        <a href="https://taco-bout-it-too.herokuapp.com/">
+        <a href="https://github.com/8bearings/Taco-Bout-It">
           <figure>
             <img id="static" src="imgs/tacostatic.png">
             <img id="gifs" src="imgs/Taco.gif">
             <figcaption>
               <h4 class="category">Taco Bout' It</h4>
               <h3 class="projectText">Login and create reviews of taco restaurants, upload photos, and like others posts.</h3>
-                <h4 class="category bottomCat"> Use Email: taco@taco.com Password: tacotaco</h4>
+                <!-- <h4 class="category bottomCat"> Use Email: taco@taco.com Password: tacotaco</h4> -->
             </figcaption>
           </figure>
         </a>
       </div>
       <div class="column-xs-12 column-sm-4">
-        <a href="https://trick-suggestor.herokuapp.com/">
+        <a href="https://github.com/8bearings/Trick-Suggester-App">
           <figure>
             <img id="static" src="imgs/SuggestorStatic.png">
             <img id="gifs" src="imgs/Trick.gif">
@@ -137,25 +140,12 @@
               <h3 class="projectText"> A app that conveniently suggests a new skateboarding trick to learn.
                
               </h3>
-              <h4 class="category bottomCat"> Use Email: taco@taco.com Password: tacotaco</h4>
+              <!-- <h4 class="category bottomCat"> Use Email: taco@taco.com Password: tacotaco</h4> -->
             </figcaption>
           </figure>
         </a>
       </div>
-      <div class="column-xs-12 column-sm-4">
-        <a href="https://dry-brushlands-23544.herokuapp.com/">
-          <figure>
-            <img id="static" src="imgs/phonestatic.png">
-            <img id="gifs" src="imgs/CellPhone.gif">
-            
-            <figcaption >
-              <h4 class="category">Phone Checker</h4>
-              <h3 class="projectText">Upload a photo & check to see if there's a cell phone in the photo!</h3>
-            </figcaption>
-          </figure>
-        </a>
-        
-      </div>
+
       <div class="column-xs-12 text-center">
         <a class="btn outline" href="#top">Back to Top</a>
       </div>

@@ -577,29 +577,42 @@ div.highlightTextIn a:before
 		 opacity: 0;
 	}
 }
- .intro {
-	 grid-column: -1;
-	 grid-row-end: span 2;
-	 width: 100%;
-	 position: relative;
-	 align-self: center;
-}
- .intro > * {
-	 max-width: 1000px;
-	 text-align: left;
-}
- .intro > h1 {
-	 margin: -1rem auto 0 auto;
-	 font-size: 2.2rem;
-	 font-weight: 700;
-	 line-height: 1.5;
-}
- .intro > p {
-	 margin: 0 auto;
-	 font-size: .6rem;
-	 font-weight: 300;
-	 line-height: 1.6;
-}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: .5rem;
+    /* padding: 1rem; */
+  }
+  
+  /* Style for the intro section */
+  .intro {
+    grid-column: 3 / -3; 
+    grid-row: 1; 
+    width: 100%;
+    text-align: center;
+    padding: 5px; 
+    z-index: 7; 
+  }
+  
+  .intro h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+  
+  .intro p {
+    font-size: 1rem;
+    font-weight: 300;
+    margin: 0;
+    text-align: center;
+  }
+  
+  /* Ensure the grid items don't overlap the intro */
+  .grid > .regular,
+  .grid > .wide,
+  .grid > .tall {
+    margin-top: 2rem; /* Add margin to avoid overlap */
+  }
  .regular {
 	 height: auto;
 	 width: auto;
@@ -677,12 +690,14 @@ p{
 		 grid-column-end: span 2;
 	}
 	 .intro h1 {
-		 font-size: 1.5rem;
+		 font-size: 2.0rem;
 	}
-	 .intro p {
-		 font-size: .5rem;
-         text-align: left;
-	}
+    .intro p {
+        font-size: .8rem;
+        font-weight: 300;
+        margin: 0;
+        text-align: center;
+      }
 }
  .spinner {
 	 margin: 0 1;
@@ -1156,7 +1171,7 @@ p{
         margin: -1rem auto 0 auto;
         font-size: 1.3rem;
         font-weight: 700;
-        line-height: 1.2;
+        line-height: 1.0;
     }
       div.container a {
         /* color: rgb(133, 133, 133); */

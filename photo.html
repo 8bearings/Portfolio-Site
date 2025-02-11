@@ -1,48 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="Cache-control" content="public">
-    <script src="/js/photo.js"></script>
-    <link rel="stylesheet" href="/css/photo.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Press+Start+2P&display=swap" rel="stylesheet">        
-    <title>Elliott Watson</title>
-    <link rel="shortcut icon" type="image/png" href="https://t4.ftcdn.net/jpg/04/24/47/87/360_F_424478724_hVSfsXLKJJuQMeaN5hFxmV3C6qTsVej3.jpg">
-    <a name="top"></a>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="Cache-control" content="public">
+  <script src="/js/photo.js"></script>
+  <link rel="stylesheet" href="/css/photo.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Press+Start+2P&display=swap" rel="stylesheet">
+  <title>Elliott Watson</title>
+  <link rel="shortcut icon" type="image/png" href="https://t4.ftcdn.net/jpg/04/24/47/87/360_F_424478724_hVSfsXLKJJuQMeaN5hFxmV3C6qTsVej3.jpg">
+  <a name="top"></a>
 </head>
 <body>
   <header>
     <div class="container gray highlightTextIn">
-        <a href="index.html" alt="HOME">HOME</a>
-        <a href="index.html#about" alt="ABOUT">ABOUT</a>
-        <a href="index.html#projects" alt="PORTFOLIO">PORTFOLIO</a>
-        <a href="photo.html" alt="PHOTOGRAPHY">PHOTOGRAPHY</a>
+      <a href="index.html" title="HOME">HOME</a>
+      <a href="index.html#about" title="ABOUT">ABOUT</a>
+      <a href="index.html#projects" title="PORTFOLIO">PORTFOLIO</a>
+      <a href="photo.html" title="PHOTOGRAPHY">PHOTOGRAPHY</a>
     </div>
-</header>
-    <!-- Photo Grid -->
-    <div id="Photo">
-        <!--
-Each grid item is the parent <div> with the class 'regular'.
-By default this is 1x1.
-For 1x2, add the class 'wide' to the parent <div>.
-For 2x1, add the class 'tall' to the parent <div>.
-For 2x2, add both classes to the parent <div>.
--->
+  </header>
 
-<div class="spinner" id="loading">
-    <div class="circle first"></div>
+  <div id="Photo">
+    <div class="spinner" id="loading" role="status" aria-label="Loading">
+      <div class="circle first"></div>
       <div class="circle second"></div>
-  </div>
-  
-  <div class="grid loading" id="the--grid">
-    
-    <div class="intro">
-      <h1>Photos</h1>
-      <p>By: Elliott Watson</p>
+    </div>
+
+    <div class="grid loading" id="the--grid">
+      <div class="intro">
+        <h1>Photos</h1>
+        <p>By: Elliott Watson</p>
     </div>
     
     <div class="regular" ="Photograph in Zürich, Switzerland.">
@@ -303,16 +294,13 @@ For 2x2, add both classes to the parent <div>.
     </div>
     
   </div>
-  <!-- <button id="removeHidden">Show All</button> -->
-  <a class="loadmore" id="load-button" value="loadMore" a href="#top">Back to Top</button>
-    </a>
-    </div>
-    <footer>
-      <!-- <p class="copyright " id="inTouch">Get in Touch!</p> -->
-      <div class="container" id="footContain">
-        <section class="grid">
-          <div class="column-xs-12">
-            <ul class="soc">
+  <a class="loadmore" id="load-button" href="#top">Back to Top</a>
+</div>
+    footer>
+    <div class="container" id="footContain">
+      <section class="grid">
+        <div class="column-xs-12">
+          <ul class="soc">
               <li>
             
                 <a class="icon-13 github" href="https://github.com/8bearings" title="GitHub">
@@ -352,11 +340,10 @@ For 2x2, add both classes to the parent <div>.
                   </a>
                 </ul>
     
-            <p class="copyright">&copy; Copyright 2021 Elliott Watson</p>
+                <p class="copyright">&copy; Copyright 2021 Elliott Watson</p>
+              </div>
+            </section>
           </div>
-        </section>
-      </div>
-    </footer>
-</body>
-</html>
-
+        </footer>
+      </body>
+      </html>

@@ -1,15 +1,16 @@
-@import 'https://fonts.googleapis.com/css?family=Raleway';
-@import url('https://fonts.googleapis.com/css?family=Raleway:900&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,900&display=swap');
 
 html,
 body {
   margin: 0px;
   background-color: #ffffff;
 }
+
 body {
   animation: fadeInAnimation ease 3.5s;
   animation-iteration-count: 1;
   animation-fill-mode: forwards;
+  will-change: opacity;
 }
 
 @keyframes fadeInAnimation {
@@ -22,12 +23,17 @@ body {
 }
 header,
 footer {
+  box-sizing: border-box;
   z-index: 10;
   font-family: Raleway;
   margin: 0 auto;
-  /* padding: 5em 3em; */
+  padding: 5em 3em;
   text-align: center;
   background: #9e9e9e;
+}
+
+.header-top {
+  background: linear-gradient(0deg, #fff 0%, #fff 13%, #9e9e9e 23%);
 }
 
 header h1 {
@@ -65,6 +71,11 @@ div.container a {
   position: relative;
   z-index: 0;
   cursor: pointer;
+}
+
+div.container a:focus {
+  outline: 2px solid #92e6ff;
+  outline-offset: 2px;
 }
 
 .red {
@@ -546,21 +557,31 @@ div.highlightTextIn a:before {
 
 /* typing text */
 
+.image-holder {
+  position: relative;
+}
+
+.main-img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 .typing-text {
   position: absolute;
-  /* padding-top: 3.91%; */
-  /* for actual site use top: 6.12%; */
-  top: 3%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 100%;
+  text-align: center;
   font-family: Raleway;
   font-weight: 700;
-  text-align: center;
-  right: 18%;
-  font-size: 4.3em;
+  font-size: 3em;
   color: rgb(241, 241, 241);
-
-  /* -webkit-text-stroke: .6px rgb(108, 213, 255); */
+  z-index: 10;
+  margin: 0;
 }
+
 .typing-text::after {
   content: '|';
   animation: blink ease 1s infinite;
@@ -575,6 +596,57 @@ div.highlightTextIn a:before {
     opacity: 1;
   }
 }
+
+.header-top {
+  background-color: #9e9e9e;
+  padding: 7px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.container.gray {
+  background-color: transparent;
+  margin: 0 auto;
+  padding: 0 10px;
+  max-width: 1200px;
+}
+
+.highlightTextIn {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.highlightTextIn a {
+  color: rgb(65, 65, 65);
+  text-decoration: none;
+  font: 1.4em Raleway;
+  padding: 10px 15px;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+.highlightTextIn a:hover {
+  color: #fff;
+}
+
+.highlightTextIn a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -5px;
+  width: 100%;
+  height: 2px;
+  background-color: #fff;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.3s ease;
+}
+
+.highlightTextIn a:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
 /* Base Layout */
 /* 12columns.css | Created by Katherine Kato | Released under the MIT license */
 @import url('https://fonts.googleapis.com/css?family=Old+Standard+TT:400|Muli:300,700');
@@ -739,13 +811,13 @@ div.highlightTextIn a:before {
   .typing-text {
     position: absolute;
     /* padding-top: 3.68%; */
-    top: 8.4%;
+    /* top: 8.4%; */
     width: 100%;
     font-family: Raleway;
     font-weight: 700;
     text-align: center;
     right: 18%;
-    font-size: 4.3em;
+    font-size: 4.5em;
     color: rgb(241, 241, 241);
   }
   .column-md-1 {
@@ -872,7 +944,7 @@ div.highlightTextIn a:before {
 @media screen and (max-width: 1450px) {
   .typing-text {
     /* padding-top: 5.3%; */
-    top: 10.6%;
+    /* top: 10.6%; */
   }
 }
 @supports (display: grid) {
@@ -1148,9 +1220,10 @@ div.highlightTextIn a:before {
   box-shadow: 10px 8px 8px 1px;
 }
 .projectText {
-  font-size: 0.8em;
+  font-size: .5em;
   padding: 0;
   margin: 0;
+  font-weight: 500;
 }
 body {
   font-family: 'Muli', sans-serif;
@@ -1217,6 +1290,18 @@ a {
 }
 a:hover {
   color: #fff;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.2;
+  margin: 0 0 1rem;
+}
+
+p {
+  line-height: 1.6;
+  margin: 0 0 1.5rem;
 }
 
 ul {
@@ -1307,6 +1392,15 @@ img {
   -o-object-fit: cover;
   object-fit: cover;
 }
+
+img {
+  max-width: 100%;
+  height: auto;
+  border: 5px solid rgba(146, 230, 255, 0.6);
+  border-radius: 5px;
+  display: block;
+}
+
 .main-img {
   opacity: 0.65;
   width: 50%;
@@ -1415,6 +1509,15 @@ img {
   transform-origin: 100%;
 }
 
+.btn {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #6e6e6e;
+  color: #fff;
+}
+
 .info {
   margin: 1rem 0;
 }
@@ -1426,8 +1529,9 @@ img {
 .category {
   display: inline-block;
   position: relative;
-  margin: 1.125rem 0 1.25rem;
-  font-size: 0.6875rem;
+  margin: .125rem 1.25rem;
+  padding: 9px;
+  font-size: 0.9875rem;
   font-weight: 700;
   letter-spacing: 0.1875rem;
   color: #282828;
@@ -1460,10 +1564,12 @@ section {
 }
 
 footer {
+  padding: 2rem 0;
   text-align: center;
 }
-footer section {
-  padding: 2rem 0;
+
+footer p {
+  margin: 0;
 }
 
 @media (min-width: 48rem) {
@@ -1499,6 +1605,12 @@ footer section {
     padding-right: 10%;
   }
 
+  .projectText {
+    font-size: .8em;
+    padding: 0;
+    margin: 0;
+    font-weight: 500;
+  }
   .main-img {
     display: absolute;
     /* width: 100%;
@@ -1916,6 +2028,14 @@ footer section {
 
     /* -webkit-text-stroke: .6px rgb(108, 213, 255); */
   }
+
+
+  .projectText {
+    font-size: .8rem;
+    padding: 0;
+    margin: 0;
+    font-weight: 500;
+  }
   .main-img {
     /* width: 100%;
         height: 80vh; */
@@ -1999,5 +2119,56 @@ footer section {
   }
   .grid > [class*='column-'] {
     padding: 0.5rem;
+  }
+}
+
+@media (min-width: 48rem) {
+  .column-sm-1 {
+    flex-basis: 8.3333333333%;
+    max-width: 8.3333333333%;
+  }
+  .column-sm-2 {
+    flex-basis: 16.6666666667%;
+    max-width: 16.6666666667%;
+  }
+  .projectText {
+    font-size: .8rem;
+    padding: 0;
+    margin: 0;
+    font-weight: 500;
+  }
+}
+
+@media (min-width: 62rem) {
+  .column-md-1 {
+    flex-basis: 8.3333333333%;
+    max-width: 8.3333333333%;
+  }
+  .column-md-2 {
+    flex-basis: 16.6666666667%;
+    max-width: 16.6666666667%;
+  }
+  .projectText {
+    font-size: .8rem;
+    padding: 0;
+    margin: 0;
+    font-weight: 500;
+  }
+}
+
+@media (min-width: 75rem) {
+  .column-lg-1 {
+    flex-basis: 8.3333333333%;
+    max-width: 8.3333333333%;
+  }
+  .column-lg-2 {
+    flex-basis: 16.6666666667%;
+    max-width: 16.6666666667%;
+  }
+  .projectText {
+    font-size: .8rem;
+    padding: 0;
+    margin: 0;
+    font-weight: 500;
   }
 }
