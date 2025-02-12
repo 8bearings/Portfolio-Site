@@ -27,13 +27,12 @@ footer {
   z-index: 10;
   font-family: Raleway;
   margin: 0 auto;
-  padding: 5em 3em;
   text-align: center;
   background: #9e9e9e;
 }
 
 .header-top {
-  background: linear-gradient(0deg, #fff 0%, #fff 13%, #9e9e9e 23%);
+  background: linear-gradient(180deg, #fff 0%, #fff 3%, #9e9e9e 13%);
 }
 
 header h1 {
@@ -501,6 +500,7 @@ div.highlightTextIn a {
 div.highlightTextIn a:before {
   transform: scale(1.2);
 }
+
 #inTouch {
   border-top: #92e6ff solid;
   font-size: 1.3em;
@@ -540,7 +540,7 @@ div.highlightTextIn a:before {
   background: linear-gradient(-45deg, #a8a8a8, #92e6ff, #b8b8b87e, #92e6ff);
   background-size: 300% 300%;
   animation: gradient 3s ease infinite;
-  height: 1em;
+  height: 1.3em;
 }
 
 @keyframes gradient {
@@ -599,7 +599,6 @@ div.highlightTextIn a:before {
 
 .header-top {
   background-color: #9e9e9e;
-  padding: 7px 0;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -633,7 +632,7 @@ div.highlightTextIn a:before {
   content: '';
   position: absolute;
   left: 0;
-  bottom: -5px;
+  bottom: 7px;
   width: 100%;
   height: 2px;
   background-color: #fff;
@@ -1369,9 +1368,7 @@ nav .grid > [class*='column-'] {
 #belowHead {
   display: block;
 }
-header {
-  background: linear-gradient(0deg, #fff 0%, #fff 13%, #9e9e9e 23%);
-}
+
 header section {
   padding: 0;
 }
@@ -1403,7 +1400,7 @@ img {
 
 .main-img {
   opacity: 0.65;
-  width: 50%;
+  /* width: 50%; */
   height: 30vh;
 }
 .bioPic {
@@ -1435,8 +1432,8 @@ img {
 }
 .main-img,
 #about img {
-  height: 45vh;
-  width: 93%;
+  height: 35vh;
+  /* width: 93%; */
 }
 
 #about.grid > [class*='column-']:first-child {
@@ -1615,10 +1612,10 @@ footer p {
     display: absolute;
     /* width: 100%;
     height: 80vh; */
-    width: 84.5%;
+    /* width: 84.5%; */
     height: 29vh;
     /* padding-left: 10%; */
-    margin-left: 3%;
+    /* margin-left: 3%; */
   }
 
   #about img {
@@ -2046,6 +2043,10 @@ footer p {
     justify-content: center;
     align-items: center;
   }
+
+#about img {
+  height: 25vh;
+}
   .highlightTextIn > a {
     font-size: 0.3em;
     width: fit-content;

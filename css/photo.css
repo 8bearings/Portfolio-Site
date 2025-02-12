@@ -14,6 +14,7 @@ header, footer
 	text-align: center;
     background: #555;
 }
+
 body {
     animation: fadeInAnimation ease 3.5s;
     animation-iteration-count: 1;
@@ -41,11 +42,44 @@ div.container
 {
     font-family: Raleway;
     margin: 0 auto;
-	padding: 3em 3em;
+	/* padding: 2rem 3rem; */
 	text-align: center;
 /* keep sticky */
    
 }
+/* Highlight text out  */
+div.highlightTextOut a {
+    color: rgba(255, 255, 255, 0.3);
+  }
+  
+  div.highlightTextOut a:before,
+  div.highlightTextIn a:before {
+    position: absolute;
+    color: #92e6ff;
+    top: 0px;
+    left: 0px;
+    padding: 10px;
+    overflow: hidden;
+    content: attr(alt);
+    transition: all 0.3s;
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  
+  div.highlightTextOut a:hover:before,
+  div.highlightTextIn a:hover:before {
+    transform: scale(1);
+    opacity: 1;
+  }
+  
+  /* Highlight text in  */
+  div.highlightTextIn a {
+    color: rgba(0, 0, 0, 0.4);
+  }
+  
+  div.highlightTextIn a:before {
+    transform: scale(1.2);
+  }
 
 div.container a
 {
@@ -59,6 +93,43 @@ div.container a
     cursor: pointer;
 }
 
+.highlightTextIn {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .highlightTextIn a {
+    color: rgb(65, 65, 65);
+    text-decoration: none;
+    font: 1.4em Raleway;
+    padding: 10px 15px;
+    position: relative;
+    transition: color 0.3s ease;
+  }
+  
+  .highlightTextIn a:hover {
+    color: #fff;
+  }
+  
+  .highlightTextIn a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 7px;
+    width: 100%;
+    height: 2px;
+    background-color: #fff;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+  }
+
+  .highlightTextIn a:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+  
 .red
 {
     background: #f44336;
@@ -534,8 +605,8 @@ div.highlightTextIn a:before
 /* Photo Grid */
 #Photo{
     border: ridge #92e6ff;
-    
 }
+
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
  body {
 	 margin: 0;
@@ -547,18 +618,38 @@ div.highlightTextIn a:before
 	 font-size: 20%;
 	 color: rgb(0, 0, 0);
 }
+
  .grid {
     margin: 0 auto;
 	 margin: 1rem;
-	 width: calc(100% - 2rem);
+	 width: calc(100% - .4rem);
 	 display: grid;
-	 grid-template-columns: repeat(auto-fit, minmax(100%, 1fr));
-	 grid-gap: 1rem;
-	 /* grid-auto-rows: 250px; */
-	 grid-auto-flow: row dense;
+	 grid-template-columns: repeat(auto-fit, minmax(100%, 2fr));
+	 grid-gap: .8rem;
 	 opacity: 0;
 	 animation: load-in 2000ms ease-out forwards;
 }
+
+/* Hide the loading wheel */
+#loading.hide {
+    display: none;
+  }
+  
+  /* Fade-in effect for lazy-loaded images */
+  .grid img {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+  
+  .grid img.loaded {
+    opacity: 1;
+  }
+  
+  /* Hidden elements */
+  .hidden {
+    display: none;
+  }
+  
  @media screen and (min-width: 382px) {
 	 .grid {
 		 grid-template-columns: repeat(auto-fit, minmax(325px, 1fr))
@@ -566,46 +657,193 @@ div.highlightTextIn a:before
 }
  .grid.loading {
 	 animation-play-state: paused !important;
-}
- @keyframes load-in {
-	 100% {
-		 opacity: 1;
-	}
-}
- @keyframes load-out {
-	 100% {
-		 opacity: 0;
-	}
-}
-.grid {
+     @keyframes load-in {
+        100% {
+          opacity: 1;
+        }
+      }
+      
+      @keyframes load-out {
+        100% {
+          opacity: 0;
+        }
+      }
+    }
+      /* Ensure the grid is visible by default */
+      .grid {
+        opacity: 1; /* Remove initial opacity: 0 */
+        animation: none; /* Remove conflicting animations */
+      }
+      
+      /* Lazy loading styles */
+      .grid img {
+        opacity: 0; /* Start with images hidden */
+        transition: opacity 0.5s ease; /* Smooth fade-in effect */
+      }
+      
+      .grid img.loaded {
+        opacity: 1; /* Show images when loaded */
+      }
+      
+      /* Ensure the loading wheel is hidden when not needed */
+      #loading.hide {
+        display: none;
+      }
+      
+      /* Remove conflicting transitions */
+      .regular:hover .img,
+      .regular:hover .overlay {
+        transition: none; /* Disable transitions on hover */
+      }
+      
+      /* Ensure the intro section stays visible */
+      .intro {
+        grid-column: 1 / -1; /* Span all columns */
+        grid-row: 1; /* Place it in the first row */
+        width: 100%;
+        text-align: center;
+        z-index: 10; /* Ensure it sits on top of other elements */
+      }
+
+
+  
+  /* Grid items */
+  
+  .grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: .5rem;
-    /* padding: 1rem; */
+    grid-template-columns: repeat(auto-fit, minmax(325px, 1fr)); /* Responsive grid */
+    gap: 1rem; /* Spacing between grid items */
+    padding: 1rem; /* Padding around the grid */
+    margin: 0 auto; /* Center the grid */
+    width: calc(100% - 2rem); /* Full width with padding */
   }
   
-  /* Style for the intro section */
-  .intro {
-    grid-column: 3 / -3; 
-    grid-row: 1; 
-    width: 100%;
-    text-align: center;
-    padding: 5px; 
-    z-index: 7; 
+  /* Grid items */
+  .grid > .regular,
+  .grid > .wide,
+  .grid > .tall {
+    position: relative;
+    overflow: hidden; /* Ensure images don't overflow */
+    border-radius: 8px; /* Optional: Rounded corners */
+    background-color: #f0f0f0; /* Placeholder background */
   }
   
+  /* Images */
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(275px, 1fr)); /* Responsive grid*/
+    grid-template-rows: auto; /* Ensure rows are defined */
+    gap: 1rem; /* Spacing between grid items */
+    padding: 1rem; /* Padding around the grid */
+    margin: 0 auto; /* Center the grid */
+    width: calc(100% - 3.5rem); 
+  }
+  
+
+/* Grid items */
+.grid > .regular,
+.grid > .wide,
+.grid > .tall {
+  position: relative;
+  overflow: hidden; /* Ensure images don't overflow */
+  border-radius: 8px; /* Optional: Rounded corners */
+  background-color: #f0f0f0; /* Placeholder background */
+}
+
+/* Tall items span 2 rows */
+.grid > .tall {
+    grid-row-end: span 2; /* Span 2 rows */
+    display: flex; /* Use flexbox to center the image */
+    flex-direction: column; /* Stack children vertically */
+  }
+
+/* Images */
+.grid img {
+    width: 100%; /* Ensure images fill their container */
+    height: 100%; /* Fill the height of the container */
+    object-fit: cover; /* Maintain aspect ratio while covering the container */
+    display: block; /* Remove extra space below images */
+    transition: opacity 0.5s ease; /* Smooth fade-in effect */
+    opacity: 0; /* Start with images hidden */
+  }
+  
+  .grid img.loaded {
+    opacity: 1; /* Show images when loaded */
+  }
+
+/* Overlay and text styling */
+
+.grid .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.grid .text {
+  position: absolute;
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Adjust for exact centering */
+  text-align: center; /* Center the text */
+  color: white;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 2; /* Ensure text is above the overlay */
+}
+
+.grid > div:hover .overlay,
+.grid > div:hover .text {
+  opacity: 1; /* Show overlay and text on hover */
+}
+
+/* Intro section */
+.intro {
+  grid-column: 1 / -1; /* Span all columns */
+  grid-row: 1; /* Place it in the first row */
+  width: 100%;
+  text-align: center;
+  padding: 2rem 0;
+  z-index: 10; /* Ensure it sits on top of other elements */
+}
+
+.intro h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.intro p {
+  font-size: 1rem;
+  font-weight: 300;
+  margin: 0;
+}
+
+/* Ensure the grid items don't overlap the intro */
+.grid > .regular,
+.grid > .wide,
+.grid > .tall {
+  margin-top: 1rem; /* Add margin to avoid overlap */
+}
+
+/* Responsive adjustments */
+@media screen and (min-width: 767px) {
+  .wide {
+    grid-column-end: span 2; /* Wide items span 2 columns */
+  }
+
   .intro h1 {
-    font-size: 2.2rem;
-    font-weight: 700;
-    margin-bottom: 0.5rem;
+    font-size: 2rem;
   }
-  
+
   .intro p {
-    font-size: 1rem;
-    font-weight: 300;
-    margin: 0;
-    text-align: center;
+    font-size: 0.8rem;
   }
+}
   
   /* Ensure the grid items don't overlap the intro */
   .grid > .regular,
@@ -613,6 +851,11 @@ div.highlightTextIn a:before
   .grid > .tall {
     margin-top: 2rem; /* Add margin to avoid overlap */
   }
+
+  .tall {
+    grid-row-end: span 2;
+}
+
  .regular {
 	 height: auto;
 	 width: auto;
@@ -846,9 +1089,8 @@ p{
 	list-style: none;
 	margin: 0 auto;
 	text-align: center;
-	width: 110rem;
 	max-width: 100%;
-    padding-right: 3%;
+    padding: 0;
 }
 
 .soc li {
@@ -861,7 +1103,7 @@ p{
 }
 
 .soc a {
-	height: 3.6rem;
+	/* height: 3.6rem; */
 	width: 3.6rem;
 }
 
@@ -1143,6 +1385,24 @@ p{
 #footContain{
     background: none;
 }
+  /* Responsive adjustments */
+  @media screen and (min-width: 767px) {
+    .tall {
+      grid-row-end: span 2; /* Tall items span 2 rows */
+    }
+  
+    .wide {
+      grid-column-end: span 2; /* Wide items span 2 columns */
+    }
+  
+    .intro h1 {
+      font-size: 2rem;
+    }
+  
+    .intro p {
+      font-size: 0.8rem;
+    }
+  }
 
 @media screen and (max-width: 550px) {
     .highlightTextIn > a{
@@ -1155,23 +1415,32 @@ p{
         border: ridge #92e6ff;
         
     }
+    /*
+    /*
     .grid {
         margin: 0 auto;
          margin: 1rem;
          /* width: 100%; */
+             /*
          display: grid;
          grid-template-columns: repeat(auto-fit, minmax(50%, 1fr));
          grid-gap: .8rem;
-         /* grid-auto-rows: 250px; */
+         /* grid-auto-rows: 250px; 
          grid-auto-flow: row dense;
          opacity: 0;
-         animation: load-in 1000ms ease-out forwards;
+         animation: load-in 2000ms ease-in backwards;
     }
+*/
     .intro > h1 {
         margin: -1rem auto 0 auto;
-        font-size: 1.3rem;
+        font-size: 1.5rem;
         font-weight: 700;
-        line-height: 1.0;
+    }
+
+    .intro > p {
+        margin: .1rem auto 0 auto;
+        font-size: .8rem;
+        font-weight: 700;
     }
       div.container a {
         /* color: rgb(133, 133, 133); */
@@ -1183,6 +1452,7 @@ p{
         z-index: 0;
         cursor: pointer;
     }
+
     .soc {
         display: block;
         font-size: 0;
@@ -1202,7 +1472,7 @@ p{
            padding-right: 1%;
        }
        .soc a {
-        height: 5.6rem;
+        /* height: 5.6rem; */
         width: 2.6rem;
     }
  }

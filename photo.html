@@ -15,12 +15,12 @@
   <a name="top"></a>
 </head>
 <body>
-  <header>
+  <header class="header-top">
     <div class="container gray highlightTextIn">
-      <a href="index.html" title="HOME">HOME</a>
-      <a href="index.html#about" title="ABOUT">ABOUT</a>
-      <a href="index.html#projects" title="PORTFOLIO">PORTFOLIO</a>
-      <a href="photo.html" title="PHOTOGRAPHY">PHOTOGRAPHY</a>
+      <a href="index.html" alt="HOME" title="HOME">HOME</a>
+      <a href="index.html#about" alt="ABOUT" title="ABOUT">ABOUT</a>
+      <a href="index.html#projects" alt="PORTFOLIO" title="PORTFOLIO">PORTFOLIO</a>
+      <a href="photo.html" alt="PHOTOGRAPHY" title="PHOTOGRAPHY">PHOTOGRAPHY</a>
     </div>
   </header>
 
@@ -29,274 +29,494 @@
       <div class="circle first"></div>
       <div class="circle second"></div>
     </div>
-
+  
     <div class="grid loading" id="the--grid">
       <div class="intro">
-        <h1>Photos</h1>
+        <h1>PHOTOGRAPHY</h1>
         <p>By: Elliott Watson</p>
-    </div>
-    
-    <div class="regular" ="Photograph in Zürich, Switzerland.">
-      <div class="text">
-        <p>Untitled</p>
-        <a href="https://www.instagram.com/8bearingsphoto/?hl=en" ="To the art.">See more</a>
       </div>
-      <div class="overlay"></div>    
-      <img class="img" src="imgs/Optimized Pics/18317255080_b8670a4842_c.jpg">
-    </div>
-    
-    <div class="regular" ="Photograph in Coney Island, United States of America.">
-      <div class="text">
-        <p>Just the Beginning</p>
-        <a href="https://www.instagram.com/8bearingsphoto/?hl=en" ="To the art.">See more</a>
+  
+      <!-- Grid items with lazy loading -->
+      <div class="regular tall" data-description="Photograph in Zürich, Switzerland.">
+        <div class="text">
+          <p>Untitled</p>
+          <!-- <a href="https://www.instagram.com/8bearingsphoto/?hl=en" title="To the art.">See more</a> -->
+        </div>
+        <div class="overlay"></div>
+        <img class="img" data-src="imgs/Optimized-Pics/18317255080_b8670a4842_c.jpg" loading="lazy" alt="Photograph in Zürich, Switzerland.">
       </div>
-      <div class="overlay"></div>  
-      <img class="img" src="https://live.staticflickr.com/7843/39642167303_1d89cca7ee_k.jpg">
-    </div>
-    
-    <div class="regular" ="Photograph in Detroit, United States of America.">
-      <div class="text">
-        <p>Boneless 180</p>
-        <a href="https://www.instagram.com/8bearingsphoto/?hl=en" ="To the art.">See more</a>
+  
+      <div class="regular wide" id="imageHiding1" data-description="Photograph in Location.">
+        <div class="text">
+          <p>Kyoto</p>
+          <!-- <a href="https://www.instagram.com/8bearingsphoto/?hl=en" title="To the art.">See more</a> -->
+        </div>
+        <div class="overlay"></div>
+        <img class="img" data-src="imgs/Optimized-Pics/R6__9845.webp" loading="lazy" alt="Photograph in Location.">
       </div>
-      <div class="overlay"></div>  
-      <img class="img" src="https://live.staticflickr.com/399/19620018124_f865f559ed_c.jpg">
-    </div>
-    
-    <div class="regular" ="Photograph in Berlin, Germany.">
-      <div class="text">
-        <p>Water Relections</p>
-        <a href="https://www.instagram.com/8bearingsphoto/?hl=en" ="To the art.">See more</a>
-      </div>
-      <div class="overlay"></div>  
-      <img class="img" src="https://live.staticflickr.com/5659/23644785919_d5594b879e_c.jpg">      
-    </div>
-    
-    <div class="regular wide" ="Photograph in Portand, United States of America.">
-      <div class="text">
-        <p>Kisses</p>
-        <a href="https://www.instagram.com/8bearingsphoto/?hl=en" ="To the art.">See more</a>
-      </div>
-      <div class="overlay"></div>  
-      <img class="img" src="//live.staticflickr.com/8773/18221892729_120e5bc94b_z.jpg"> 
-    </div>
-    
-    <div class="regular" ="Photograph in Lyon, France.">
-      <div class="text">
-        <p>Captured in Style.</p>
-        <a href="https://www.instagram.com/8bearingsphoto/?hl=en" ="To the art.">See more</a>
-      </div>
-      <div class="overlay"></div>  
-      <img class="img" src="https://live.staticflickr.com/8440/28403310374_8f0a6c3006_c.jpg">     
-    </div>
-    
-    <div class="regular" ="Photograph in Melbourne, Australia.">
-      <div class="text">
-        <p>The Big Apple</p>
-        <a href="https://www.instagram.com/8bearingsphoto/?hl=en" ="To the art.">See more</a>
-      </div>
-      <div class="overlay"></div>  
-      <img class="img" src="https://live.staticflickr.com/8628/28363766314_84bd84fd42_c.jpg">    
-    </div>
-    
-    <div class="regular tall" ="Photograph in Mumbai, India.">
-      <div class="text">
-        <p>Through the Woods</p>
-        <a href="https://www.instagram.com/8bearingsphoto/?hl=en" ="To the art.">See more</a>
-      </div>
-      <div class="overlay"></div>  
-      <img class="img" src="https://live.staticflickr.com/915/42937677824_d4811779b9_h.jpg">    
-    </div>
-    
-    <div class="regular wide" id="imageHiding1" ="Photograph in London, United Kingom.">
-      <div class="text">
-        <p>Expression Through Dance</p>
-        <a href="https://www.instagram.com/8bearingsphoto/?hl=en" ="To the art.">See more</a>
-      </div>
-      <div class="overlay"></div>  
-      <img class="img" src="imgs/Optimized Pics/DSCF4522-min-min.JPG">
-    </div>
 
-    <div class="regular" ="Photograph in Oakland, United States of America.">
-      <div class="text">
-        <p>Down by the Water</p>
-        <a href="https://www.instagram.com/8bearingsphoto/?hl=en" ="To the art.">See more</a>
+      <div class="regular tall" data-description="Photograph in Coney Island, United States of America.">
+        <div class="text">
+          <p>Just the Beginning</p>
+          <!-- <a href="https://www.instagram.com/8bearingsphoto/?hl=en" title="To the art.">See more</a> -->
+        </div>
+        <div class="overlay"></div>
+        <img class="img" data-src="https://live.staticflickr.com/7843/39642167303_1d89cca7ee_k.jpg" loading="lazy" alt="Photograph in Coney Island, United States of America.">
       </div>
-      <div class="overlay"></div>  
-      <img class="img" src="https://live.staticflickr.com/598/31630482093_c621f1f8d1_c.jpg"> 
-    </div>
-    
-    <div class="regular " ="Photograph in Arlington, United States of America.">
-      <div class="text">
-        <p>LANS</p>
-        <a href="https://www.instagram.com/8bearingsphoto/?hl=en" ="To the art.">See more</a>
+  
+      <div class="regular tall" 
+      id="imageHiding33" data-description="Photograph in Detroit, United States of America.">
+        <div class="text">
+          <p>Boneless 180</p>
+          <!-- <a href="https://www.instagram.com/8bearingsphoto/?hl=en" title="To the art.">See more</a> -->
+        </div>
+        <div class="overlay"></div>
+        <img class="img" data-src="https://live.staticflickr.com/399/19620018124_f865f559ed_c.jpg" loading="lazy" alt="Photograph in Detroit, United States of America.">
       </div>
-      <div class="overlay"></div>  
-      <img class="img" src="https://live.staticflickr.com/4361/36702494235_9ae6720ed3_k.jpg">
-    </div>
-    
-    <div class="regular" ="Photograph in Toronto, Canada.">
-      <div class="text">
-        <p>Gaze</p>
-        <a href="https://www.instagram.com/8bearingsphoto/?hl=en" ="To the art.">See more</a>
+  
+      <div class="regular wide" data-description="Photograph in Berlin, Germany.">
+        <div class="text">
+          <p>Water Reflections</p>
+          <!-- <a href="https://www.instagram.com/8bearingsphoto/?hl=en" title="To the art.">See more</a> -->
+        </div>
+        <div class="overlay"></div>
+        <img class="img" data-src="https://live.staticflickr.com/5659/23644785919_d5594b879e_c.jpg" loading="lazy" alt="Photograph in Berlin, Germany.">
       </div>
-      <div class="overlay"></div>  
-      <img class="img" src="https://live.staticflickr.com/891/40434690295_3a656cedfb_k.jpg">
-    </div>
-    
-    <div class="regular " ="Photograph in Birmingham, United Kingdom.">
-      <div class="text">
-        <p>Posted</p>
-        <a href="https://www.instagram.com/8bearingsphoto/?hl=en" ="To the art.">See more</a>
+  
+      <div class="regular wide" data-description="Photograph in Portland, United States of America.">
+        <div class="text">
+          <p>Kisses</p>
+          <!-- <a href="https://www.instagram.com/8bearingsphoto/?hl=en" title="To the art.">See more</a> -->
+        </div>
+        <div class="overlay"></div>
+        <img class="img" data-src="//live.staticflickr.com/8773/18221892729_120e5bc94b_z.jpg" loading="lazy" alt="Photograph in Portland, United States of America.">
       </div>
-      <div class="overlay"></div>  
-      <img class="img" src="https://live.staticflickr.com/1801/42445413915_66c6cd474c_k.jpg">
-    </div>
-    
-    <div class="regular wide" ="Photograph in Bristol, United Kingdom.">
-      <div class="text">
-        <p>Relaxed</p>
-        <a href="https://www.instagram.com/8bearingsphoto/?hl=en" ="To the art.">See more</a>
+  
+      <div class="regular" data-description="Photograph in Lyon, France.">
+        <div class="text">
+          <p>Captured in Style.</p>
+          <!-- <a href="https://www.instagram.com/8bearingsphoto/?hl=en" title="To the art.">See more</a> -->
+        </div>
+        <div class="overlay"></div>
+        <img class="img" data-src="https://live.staticflickr.com/8440/28403310374_8f0a6c3006_c.jpg" loading="lazy" alt="Photograph in Lyon, France.">
       </div>
-      <div class="overlay"></div>  
-      <img class="img" src="imgs/Optimized Pics/43165716875_50ea5bfb06_c.jpg">
-    </div>
-    
-    <div class="regular" ="Photograph in London, United Kingdom.">
-      <div class="text">
-        <p>Bond.</p>
-        <a href="https://www.instagram.com/8bearingsphoto/?hl=en" ="To the art.">See more</a>
+  
+      <div class="regular" id="imageHiding31"
+      data-description="Photograph in Melbourne, Australia.">
+        <div class="text">
+          <p>The Big Apple</p>
+          <!-- <a href="https://www.instagram.com/8bearingsphoto/?hl=en" title="To the art.">See more</a> -->
+        </div>
+        <div class="overlay"></div>
+        <img class="img" data-src="https://live.staticflickr.com/8628/28363766314_84bd84fd42_c.jpg" loading="lazy" alt="Photograph in Melbourne, Australia.">
       </div>
-      <div class="overlay"></div>  
-      <img class="img" src="https://live.staticflickr.com/1862/30397562438_24117b4288_k.jpg">
-    </div>
-
-    <div class="regular tall" ="Photograph in Detroit, United States of America.">
-      <div class="text">
-        <p>Cover</p>
-        <a href="https://www.instagram.com/8bearingsphoto/?hl=en" ="To the art.">See more</a>
+  
+      <div class="regular" data-description="Photograph in Mumbai, India.">
+        <div class="text">
+          <p>Through the Woods</p>
+          <!-- <a href="https://www.instagram.com/8bearingsphoto/?hl=en" title="To the art.">See more</a> -->
+        </div>
+        <div class="overlay"></div>
+        <img class="img" data-src="https://live.staticflickr.com/915/42937677824_d4811779b9_h.jpg" loading="lazy" alt="Photograph in Mumbai, India.">
       </div>
-      <div class="overlay"></div>  
-      <img class="img" src="https://live.staticflickr.com/1977/31407479878_91d2b91d82_h.jpg">
-    </div>
-
-    <div class="regular" ="Photograph in New York, United States of America.">
-      <div class="text">
-        <p>Just Take a Look</p>
-        <a href="https://www.instagram.com/8bearingsphoto/?hl=en" ="To the art.">See more</a>
+  
+      <div class="regular wide" id="imageHiding1" data-description="Photograph in London, United Kingdom.">
+        <div class="text">
+          <p>Expression Through Dance</p>
+          <!-- <a href="https://www.instagram.com/8bearingsphoto/?hl=en" title="To the art.">See more</a> -->
+        </div>
+        <div class="overlay"></div>
+        <img class="img" data-src="imgs/Optimized-Pics/DSCF4522-min-min.JPG" loading="lazy" alt="Photograph in London, United Kingdom.">
       </div>
-      <div class="overlay"></div>  
-      <img class="img" src="imgs/Optimized Pics/DSCF0234-min-min-min.JPEG">
-    </div>
-    <div class="regular wide" ="Photograph in New York, United States of America.">
-      <div class="text">
-        <p>Untitled</p>
-        <a href="https://www.instagram.com/8bearingsphoto/?hl=en" ="To the art.">See more</a>
+  
+      <div class="regular wide" data-description="Photograph in Oakland, United States of America.">
+        <div class="text">
+          <p>Down by the Water</p>
+          <!-- <a href="https://www.instagram.com/8bearingsphoto/?hl=en" title="To the art.">See more</a> -->
+        </div>
+        <div class="overlay"></div>
+        <img class="img" data-src="https://live.staticflickr.com/598/31630482093_c621f1f8d1_c.jpg" loading="lazy" alt="Photograph in Oakland, United States of America.">
       </div>
-      <div class="overlay"></div>  
-      <img class="img" src="imgs/Optimized Pics/DSCF7877-min.jpg">
-    </div>
-    <div class="regular" ="Photograph in New York, United States of America.">
-      <div class="text">
-        <p>Untitled</p>
-        <a href="https://www.instagram.com/8bearingsphoto/?hl=en" ="To the art.">See more</a>
+  
+      <div class="regular wide" data-description="Photograph in Arlington, United States of America.">
+        <div class="text">
+          <p>LANS</p>
+          <!-- <a href="https://www.instagram.com/8bearingsphoto/?hl=en" title="To the art.">See more</a> -->
+        </div>
+        <div class="overlay"></div>
+        <img class="img" data-src="https://live.staticflickr.com/4361/36702494235_9ae6720ed3_k.jpg" loading="lazy" alt="Photograph in Arlington, United States of America.">
       </div>
-      <div class="overlay"></div>  
-      <img class="img" src="imgs/Optimized Pics/DSCF0454-min-min-min.JPG">
-    </div>
-    
-    <div class="regular " ="Photograph in Melbourne, Australia.">
-      <div class="text">
-        <p>Untitled</p>
-        <a href="https://www.instagram.com/8bearingsphoto/?hl=en" ="To the art.">See more</a>
+  
+      <div class="regular" data-description="Photograph in Toronto, Canada.">
+        <div class="text">
+          <p>Gaze</p>
+          <!-- <a href="https://www.instagram.com/8bearingsphoto/?hl=en" title="To the art.">See more</a> -->
+        </div>
+        <div class="overlay"></div>
+        <img class="img" data-src="https://live.staticflickr.com/891/40434690295_3a656cedfb_k.jpg" loading="lazy" alt="Photograph in Toronto, Canada.">
       </div>
-      <div class="overlay"></div>  
-      <img class="img" src="imgs/Optimized Pics/DSCF0828-min-min.JPEG">
-    </div>
-
-    <div class="regular wide" ="Photograph in New York, United States of America.">
-      <div class="text">
-        <p>Untitled</p>
-        <a href="https://www.instagram.com/8bearingsphoto/?hl=en" ="To the art.">See more</a>
+  
+      <div class="regular" data-description="Photograph in Birmingham, United Kingdom.">
+        <div class="text">
+          <p>Posted</p>
+          <!-- <a href="https://www.instagram.com/8bearingsphoto/?hl=en" title="To the art.">See more</a> -->
+        </div>
+        <div class="overlay"></div>
+        <img class="img" data-src="https://live.staticflickr.com/1801/42445413915_66c6cd474c_k.jpg" loading="lazy" alt="Photograph in Birmingham, United Kingdom.">
       </div>
-      <div class="overlay"></div>  
-      <img class="img" src="imgs/Optimized Pics/DSCF1377-min-min.JPEG">
-    </div>
-    
-    <div class="regular" ="Photograph in Milwaukee, United States of America.">
-      <div class="text">
-        <p>Untitled</p>
-        <a href="https://www.instagram.com/8bearingsphoto/?hl=en" ="To the art.">See more</a>
+  
+      <div class="regular " data-description="Photograph in Bristol, United Kingdom.">
+        <div class="text">
+          <p>Relaxed</p>
+          <!-- <a href="https://www.instagram.com/8bearingsphoto/?hl=en" title="To the art.">See more</a> -->
+        </div>
+        <div class="overlay"></div>
+        <img class="img" data-src="imgs/Optimized-Pics/43165716875_50ea5bfb06_c.jpg" loading="lazy" alt="Photograph in Bristol, United Kingdom.">
       </div>
-      <div class="overlay"></div>  
-      <img class="img" src="imgs/Optimized Pics/DSCF1601-min-min.JPEG">
-    </div>
-    
-    <div class="regular " id="imageHiding2" ="Photograph in Seville, Spain.">
-      <div class="text">
-        <p>Lanae</p>
-        <a href="https://www.instagram.com/8bearingsphoto/?hl=en" ="To the art.">See more</a>
+  
+      <div class="regular tall" data-description="Photograph in London, United Kingdom.">
+        <div class="text">
+          <p>Bond.</p>
+          <!-- <a href="https://www.instagram.com/8bearingsphoto/?hl=en" title="To the art.">See more</a> -->
+        </div>
+        <div class="overlay"></div>
+        <img class="img" data-src="https://live.staticflickr.com/1862/30397562438_24117b4288_k.jpg" loading="lazy" alt="Photograph in London, United Kingdom.">
       </div>
-      <div class="overlay"></div>  
-      <img class="img" src="imgs/Optimized Pics/IMG_8036-min-min.JPG">
-    </div>
-
-    <div class="regular hidden" id="imageHiding3" ="Photograph in Tel Aviv-Yafo, Israel.">
-      <div class="text">
-        <p>Jahmari Boy</p>
-        <a href="https://www.instagram.com/8bearingsphoto/?hl=en" ="To the art.">See more</a>
+  
+      <div class="regular tall" data-description="Photograph in Detroit, United States of America.">
+        <div class="text">
+          <p>Cover</p>
+          <!-- <a href="https://www.instagram.com/8bearingsphoto/?hl=en" title="To the art.">See more</a> -->
+        </div>
+        <div class="overlay"></div>
+        <img class="img" data-src="https://live.staticflickr.com/1977/31407479878_91d2b91d82_h.jpg" loading="lazy" alt="Photograph in Detroit, United States of America.">
       </div>
-      <div class="overlay"></div>  
-      <img class="img" src="imgs/Optimized Pics/DSCF5031 2-min-min.JPG">
-    </div>
-    <div class="regular tall" ="Photograph in London, United Kingdom.">
-      <div class="text">
-        <p>Alum</p>
-        <a href="https://www.instagram.com/8bearingsphoto/?hl=en" ="To the art.">See more</a>
+  
+      <div class="regular" data-description="Photograph in New York, United States of America.">
+        <div class="text">
+          <p>Just Take a Look</p>
+          <!-- <a href="https://www.instagram.com/8bearingsphoto/?hl=en" title="To the art.">See more</a> -->
+        </div>
+        <div class="overlay"></div>
+        <img class="img" data-src="imgs/Optimized-Pics/DSCF0234-min-min-min.JPEG" loading="lazy" alt="Photograph in New York, United States of America.">
       </div>
-      <div class="overlay"></div>  
-      <img class="img" src="imgs/Optimized Pics/DSCF0948-min-min.JPEG">
-    </div>
-    <div class="regular wide hidden" id="imageHiding4" ="Photograph in Berlin, Germany.">
-      <div class="text">
-        <p>Grad</p>
-        <a href="https://www.instagram.com/8bearingsphoto/?hl=en" ="To the art.">See more</a>
+  
+      <div class="regular wide " data-description="Photograph in New York, United States of America.">
+        <div class="text">
+          <p>Grad Group</p>
+          <!-- <a href="https://www.instagram.com/8bearingsphoto/?hl=en" title="To the art.">See more</a> -->
+        </div>
+        <div class="overlay"></div>
+        <img class="img" data-src="imgs/Optimized-Pics/DSCF7877-min.webp" loading="lazy" alt="Photograph in New York, United States of America.">
       </div>
-      <div class="overlay"></div>  
-      <img class="img" src="imgs/Optimized Pics/DSCF5549-min-min.JPEG">
-    </div>
-    
-    <div class="regular hidden" id="imageHiding5" ="Photograph in Dresden, Germany.">
-      <div class="text">
-        <p>Untitled</p>
-        <a href="https://www.instagram.com/8bearingsphoto/?hl=en" ="To the art.">See more</a>
+  
+      <div class="regular" data-description="Photograph in New York, United States of America.">
+        <div class="text">
+          <p>Untitled</p>
+          <!-- <a href="https://www.instagram.com/8bearingsphoto/?hl=en" title="To the art.">See more</a> -->
+        </div>
+        <div class="overlay"></div>
+        <img class="img" data-src="imgs/Optimized-Pics/DSCF0454-min-min-min.JPG" loading="lazy" alt="Photograph in New York, United States of America.">
       </div>
-      <div class="overlay"></div>  
-      <img class="img" src="imgs/Optimized Pics/IMG_3589-min-min.JPG">
-    </div>
-    
-    <div class="regular hidden" id="imageHiding6" ="Photograph in Monreal, Canada.">
-      <div class="text">
-        <p>Cult Activity</p>
-        <a href="https://www.instagram.com/8bearingsphoto/?hl=en" ="To the art.">See more</a>
+  
+      <div class="regular" data-description="Photograph in Melbourne, Australia.">
+        <div class="text">
+          <p>Untitled</p>
+          <!-- <a href="https://www.instagram.com/8bearingsphoto/?hl=en" title="To the art.">See more</a> -->
+        </div>
+        <div class="overlay"></div>
+        <img class="img" data-src="imgs/Optimized-Pics/DSCF0828-min-min.JPEG" loading="lazy" alt="Photograph in Melbourne, Australia.">
       </div>
-      <div class="overlay"></div>  
-      <img class="img" src="imgs/Optimized Pics/DSCF7362-min-min-min.jpg"> 
-    </div>
-    
-    <div class="regular hidden" id="imageHiding7" ="Photograph in Houston, United States of America.">
-      <div class="text">
-        <p>Lone Savoy</p>
-        <a href="https://www.instagram.com/8bearingsphoto/?hl=en" ="To the art.">See more</a>
+  
+      <div class="regular wide" data-description="Photograph in New York, United States of America.">
+        <div class="text">
+          <p>Besties</p>
+          <!-- <a href="https://www.instagram.com/8bearingsphoto/?hl=en" title="To the art.">See more</a> -->
+        </div>
+        <div class="overlay"></div>
+        <img class="img" data-src="imgs/Optimized-Pics/DSCF1377-min-min.JPEG" loading="lazy" alt="Photograph in New York, United States of America.">
       </div>
-      <div class="overlay"></div>  
-      <img class="img" src="imgs/Optimized Pics/IMG_2579-min-min.JPG">
+  
+      <div class="regular" data-description="Photograph in Milwaukee, United States of America.">
+        <div class="text">
+          <p>Untitled</p>
+          <!-- <a href="https://www.instagram.com/8bearingsphoto/?hl=en" title="To the art.">See more</a> -->
+        </div>
+        <div class="overlay"></div>
+        <img class="img" data-src="imgs/Optimized-Pics/DSCF1601-min-min.JPEG" loading="lazy" alt="Photograph in Milwaukee, United States of America.">
+      </div>
+  
+      <div class="regular" id="imageHiding2" data-description="Photograph in Seville, Spain.">
+        <div class="text">
+          <p>Lanae</p>
+          <!-- <a href="https://www.instagram.com/8bearingsphoto/?hl=en" title="To the art.">See more</a> -->
+        </div>
+        <div class="overlay"></div>
+        <img class="img" data-src="imgs/Optimized-Pics/IMG_8036-min-min.JPG" loading="lazy" alt="Photograph in Seville, Spain.">
+      </div>
+  
+      <div class="regular" id="imageHiding3" data-description="Photograph in Tel Aviv-Yafo, Israel.">
+        <div class="text">
+          <p>Jahmari Boy</p>
+          <!-- <a href="https://www.instagram.com/8bearingsphoto/?hl=en" title="To the art.">See more</a> -->
+        </div>
+        <div class="overlay"></div>
+        <img class="img" data-src="imgs/Optimized-Pics/DSCF5031 2-min-min.JPG" loading="lazy" alt="Photograph in Tel Aviv-Yafo, Israel.">
+      </div>
+  
+      <div class="regular tall" data-description="Photograph in London, United Kingdom.">
+        <div class="text">
+          <p>Alum</p>
+          <!-- <a href="https://www.instagram.com/8bearingsphoto/?hl=en" title="To the art.">See more</a> -->
+        </div>
+        <div class="overlay"></div>
+        <img class="img" data-src="imgs/Optimized-Pics/DSCF0948-min-min.JPEG" loading="lazy" alt="Photograph in London, United Kingdom.">
+      </div>
+  
+      <div class="regular wide " id="imageHiding4" data-description="Photograph in Berlin, Germany.">
+        <div class="text">
+          <p>Grad</p>
+          <!-- <a href="https://www.instagram.com/8bearingsphoto/?hl=en" title="To the art.">See more</a> -->
+        </div>
+        <div class="overlay"></div>
+        <img class="img" data-src="imgs/Optimized-Pics/DSCF5549-min-min.JPEG" loading="lazy" alt="Photograph in Berlin, Germany.">
+      </div>
+  
+      <div class="regular tall " id="imageHiding5" data-description="Photograph in Dresden, Germany.">
+        <div class="text">
+          <p>GO HOPPERS</p>
+          <!-- <a href="https://www.instagram.com/8bearingsphoto/?hl=en" title="To the art.">See more</a> -->
+        </div>
+        <div class="overlay"></div>
+        <img class="img" data-src="imgs/Optimized-Pics/IMG_3589-min-min.JPG" loading="lazy" alt="Photograph in Dresden, Germany.">
+      </div>
+  
+      <div class="regular " id="imageHiding6" data-description="Photograph in Montreal, Canada.">
+        <div class="text">
+          <p>Cult Activity</p>
+          <!-- <a href="https://www.instagram.com/8bearingsphoto/?hl=en" title="To the art.">See more</a> -->
+        </div>
+        <div class="overlay"></div>
+        <img class="img" data-src="imgs/Optimized-Pics/DSCF7362-min-min-min.jpg" loading="lazy" alt="Photograph in Montreal, Canada.">
+      </div>
+  
+      <div class="regular " id="imageHiding7" data-description="Photograph in Houston, United States of America.">
+        <div class="text">
+          <p>Lone Savoy</p>
+          <!-- <a href="https://www.instagram.com/8bearingsphoto/?hl=en" title="To the art.">See more</a> -->
+        </div>
+        <div class="overlay"></div>
+        <img class="img" data-src="imgs/Optimized-Pics/IMG_2579-min-min.JPG" loading="lazy" alt="Photograph in Houston, United States of America.">
+      </div>
+      <div class="regular tall" id="imageHiding6" data-description="Photograph in Location.">
+        <div class="text">
+          <p>Untitled</p>
+          <!-- <a href="https://www.instagram.com/8bearingsphoto/?hl=en" title="To the art.">See more</a> -->
+        </div>
+        <div class="overlay"></div>
+        <img class="img" data-src="imgs/Optimized-Pics/000061100008.webp" loading="lazy" alt="Photograph in Location.">
+      </div>
+      
+      <div class="regular " id="imageHiding7" data-description="Photograph in Location.">
+        <div class="text">
+          <p>Untitled</p>
+          <!-- <a href="https://www.instagram.com/8bearingsphoto/?hl=en" title="To the art.">See more</a> -->
+        </div>
+        <div class="overlay"></div>
+        <img class="img" data-src="imgs/Optimized-Pics/DSCF0681.webp" loading="lazy" alt="Photograph in Location.">
+      </div>
+      
+      <div class="regular " id="imageHiding8" data-description="Photograph in Location.">
+        <div class="text">
+          <p>Untitled</p>
+          <!-- <a href="https://www.instagram.com/8bearingsphoto/?hl=en" title="To the art.">See more</a> -->
+        </div>
+        <div class="overlay"></div>
+        <img class="img" data-src="imgs/Optimized-Pics/DSCF3610.webp" loading="lazy" alt="Photograph in Location.">
+      </div>
+      
+      <div class="regular " id="imageHiding9" data-description="Photograph in Location.">
+        <div class="text">
+          <p>Untitled</p>
+          <!-- <a href="https://www.instagram.com/8bearingsphoto/?hl=en" title="To the art.">See more</a> -->
+        </div>
+        <div class="overlay"></div>
+        <img class="img" data-src="imgs/Optimized-Pics/DSCF5439.webp" loading="lazy" alt="Photograph in Location.">
+      </div>
+      
+      <div class="regular wide" id="imageHiding10" data-description="Photograph in Location.">
+        <div class="text">
+          <p>Untitled</p>
+          <!-- <a href="https://www.instagram.com/8bearingsphoto/?hl=en" title="To the art.">See more</a> -->
+        </div>
+        <div class="overlay"></div>
+        <img class="img" data-src="imgs/Optimized-Pics/000067010008.webp" loading="lazy" alt="Photograph in Location.">
+      </div>
+      
+      <div class="regular " id="imageHiding11" data-description="Photograph in Location.">
+        <div class="text">
+          <p>Untitled</p>
+          <!-- <a href="https://www.instagram.com/8bearingsphoto/?hl=en" title="To the art.">See more</a> -->
+        </div>
+        <div class="overlay"></div>
+        <img class="img" data-src="imgs/Optimized-Pics/DSCF6084.webp" loading="lazy" alt="Photograph in Location.">
+      </div>
+      
+      <div class="regular " id="imageHiding13" data-description="Photograph in Location.">
+        <div class="text">
+          <p>Untitled</p>
+          <!-- <a href="https://www.instagram.com/8bearingsphoto/?hl=en" title="To the art.">See more</a> -->
+        </div>
+        <div class="overlay"></div>
+        <img class="img" data-src="imgs/Optimized-Pics/IMG_8233.webp" loading="lazy" alt="Photograph in Location.">
+      </div>
+      
+      <div class="regular " id="imageHiding14" data-description="Photograph in Location.">
+        <div class="text">
+          <p>Untitled</p>
+          <!-- <a href="https://www.instagram.com/8bearingsphoto/?hl=en" title="To the art.">See more</a> -->
+        </div>
+        <div class="overlay"></div>
+        <img class="img" data-src="imgs/Optimized-Pics/IMG_9673.webp" loading="lazy" alt="Photograph in Location.">
+      </div>
+      
+      <div class="regular wide" id="imageHiding15" data-description="Photograph in Location.">
+        <div class="text">
+          <p>Untitled</p>
+          <!-- <a href="https://www.instagram.com/8bearingsphoto/?hl=en" title="To the art.">See more</a> -->
+        </div>
+        <div class="overlay"></div>
+        <img class="img" data-src="imgs/Optimized-Pics/img439-positive.webp" loading="lazy" alt="Photograph in Location.">
+      </div>
+      
+      <div class="regular " id="imageHiding16" data-description="Photograph in Location.">
+        <div class="text">
+          <p>Untitled</p>
+          <!-- <a href="https://www.instagram.com/8bearingsphoto/?hl=en" title="To the art.">See more</a> -->
+        </div>
+        <div class="overlay"></div>
+        <img class="img" data-src="imgs/Optimized-Pics/R6__0346.webp" loading="lazy" alt="Photograph in Location.">
+      </div>
+      
+      <div class="regular " id="imageHiding17" data-description="Photograph in Location.">
+        <div class="text">
+          <p>Untitled</p>
+          <!-- <a href="https://www.instagram.com/8bearingsphoto/?hl=en" title="To the art.">See more</a> -->
+        </div>
+        <div class="overlay"></div>
+        <img class="img" data-src="imgs/Optimized-Pics/R6__0542.webp" loading="lazy" alt="Photograph in Location.">
+      </div>
+      
+      <div class="regular " id="imageHiding18" data-description="Photograph in Location.">
+        <div class="text">
+          <p>Untitled</p>
+          <!-- <a href="https://www.instagram.com/8bearingsphoto/?hl=en" title="To the art.">See more</a> -->
+        </div>
+        <div class="overlay"></div>
+        <img class="img" data-src="imgs/Optimized-Pics/R6__5891.webp" loading="lazy" alt="Photograph in Location.">
+      </div>
+      
+      <div class="regular wide " id="imageHiding19" data-description="Photograph in Location.">
+        <div class="text">
+          <p>Family</p>
+          <!-- <a href="https://www.instagram.com/8bearingsphoto/?hl=en" title="To the art.">See more</a> -->
+        </div>
+        <div class="overlay"></div>
+        <img class="img" data-src="imgs/Optimized-Pics/R6__6746.webp" loading="lazy" alt="Photograph in Location.">
+      </div>
+      
+      <div class="regular " id="imageHiding20" data-description="Photograph in Location.">
+        <div class="text">
+          <p>Untitled</p>
+          <!-- <a href="https://www.instagram.com/8bearingsphoto/?hl=en" title="To the art.">See more</a> -->
+        </div>
+        <div class="overlay"></div>
+        <img class="img" data-src="imgs/Optimized-Pics/R6__7122.webp" loading="lazy" alt="Photograph in Location.">
+      </div>
+      
+      <div class="regular " id="imageHiding21" data-description="Photograph in Location.">
+        <div class="text">
+          <p>Untitled</p>
+          <!-- <a href="https://www.instagram.com/8bearingsphoto/?hl=en" title="To the art.">See more</a> -->
+        </div>
+        <div class="overlay"></div>
+        <img class="img" data-src="imgs/Optimized-Pics/R6__7594.webp" loading="lazy" alt="Photograph in Location.">
+      </div>
+      
+      <div class="regular wide" id="imageHiding22" data-description="Photograph in Location.">
+        <div class="text">
+          <p>Untitled</p>
+          <!-- <a href="https://www.instagram.com/8bearingsphoto/?hl=en" title="To the art.">See more</a> -->
+        </div>
+        <div class="overlay"></div>
+        <img class="img" data-src="imgs/Optimized-Pics/R6__8416.webp" loading="lazy" alt="Photograph in Location.">
+      </div>
+      
+      <div class="regular tall" id="imageHiding23" data-description="Photograph in Location.">
+        <div class="text">
+          <p>Untitled</p>
+          <!-- <a href="https://www.instagram.com/8bearingsphoto/?hl=en" title="To the art.">See more</a> -->
+        </div>
+        <div class="overlay"></div>
+        <img class="img" data-src="imgs/Optimized-Pics/R6__9999.webp" loading="lazy" alt="Photograph in Location.">
+      </div>
+      
+      <div class="regular " id="imageHiding24" data-description="Photograph in Location.">
+        <div class="text">
+          <p>Untitled</p>
+          <!-- <a href="https://www.instagram.com/8bearingsphoto/?hl=en" title="To the art.">See more</a> -->
+        </div>
+        <div class="overlay"></div>
+        <img class="img" data-src="imgs/Optimized-Pics/R6__9905.webp" loading="lazy" alt="Photograph in Location.">
+      </div>
+      
+      <div class="regular tall" id="imageHiding26" data-description="Photograph in Location.">
+        <div class="text">
+          <p>Osaka</p>
+          <!-- <a href="https://www.instagram.com/8bearingsphoto/?hl=en" title="To the art.">See more</a> -->
+        </div>
+        <div class="overlay"></div>
+        <img class="img" data-src="imgs/Optimized-Pics/R6__9923.webp" loading="lazy" alt="Photograph in Location.">
+      </div>
+      
+      <div class="regular tall" id="imageHiding27" data-description="Photograph in Location.">
+        <div class="text">
+          <p>Untitled</p>
+          <!-- <a href="https://www.instagram.com/8bearingsphoto/?hl=en" title="To the art.">See more</a> -->
+        </div>
+        <div class="overlay"></div>
+        <img class="img" data-src="imgs/Optimized-Pics/R6__9911.webp" loading="lazy" alt="Photograph in Location.">
+      </div>
+      
+      <div class="regular tall" id="imageHiding28" data-description="Photograph in Location.">
+        <div class="text">
+          <p>Untitled</p>
+          <!-- <a href="https://www.instagram.com/8bearingsphoto/?hl=en" title="To the art.">See more</a> -->
+        </div>
+        <div class="overlay"></div>
+        <img class="img" data-src="imgs/Optimized-Pics/R6__9740.webp" loading="lazy" alt="Photograph in Location.">
+      </div>
+      <div class="regular wide" id="imageHiding29" data-description="Photograph in Location.">
+        <div class="text">
+          <p>Untitled</p>
+          <!-- <a href="https://www.instagram.com/8bearingsphoto/?hl=en" title="To the art.">See more</a> -->
+        </div>
+        <div class="overlay"></div>
+        <img class="img" data-src="imgs/Optimized-Pics/000067010008.webp" loading="lazy" alt="Photograph in Location.">
+      </div>
+      <div class="regular wide" id="imageHiding30" data-description="Photograph in Location.">
+        <div class="text">
+          <p>soft</p>
+          <!-- <a href="https://www.instagram.com/8bearingsphoto/?hl=en" title="To the art.">See more</a> -->
+        </div>
+        <div class="overlay"></div>
+        <img class="img" data-src="imgs/Optimized-Pics/DSCF6041.webp" loading="lazy" alt="Photograph in Location.">
+      </div>
     </div>
-    
   </div>
   <a class="loadmore" id="load-button" href="#top">Back to Top</a>
 </div>
-    footer>
+    <footer>
     <div class="container" id="footContain">
       <section class="grid">
         <div class="column-xs-12">
