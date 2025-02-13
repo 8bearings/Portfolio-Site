@@ -1,4 +1,4 @@
-@import 'https://fonts.googleapis.com/css?family=Raleway';
+
 
 html, body
 {
@@ -8,7 +8,7 @@ html, body
 
 header, footer
 {    
-    font-family: Raleway;
+    font-family: "Orbitron";
     margin: 0 auto;
 	/* padding: 5em 3em; */
 	text-align: center;
@@ -40,7 +40,8 @@ footer span
 
 div.container
 {
-    font-family: Raleway;
+  font-family: "Orbitron";
+    /* font-family: Raleway; */
     margin: 0 auto;
 	/* padding: 2rem 3rem; */
 	text-align: center;
@@ -83,9 +84,11 @@ div.highlightTextOut a {
 
 div.container a
 {
+  font-family: "Orbitron";
     color: #FFF;
     text-decoration: none;
-    font: 20px Raleway;
+    /* font: 20px Raleway; */
+    font-size: 20px;
     margin: 0px 10px;
     padding: 10px 10px;
     position: relative;
@@ -102,7 +105,9 @@ div.container a
   .highlightTextIn a {
     color: rgb(65, 65, 65);
     text-decoration: none;
-    font: 1.4em Raleway;
+    font-family: "Orbitron";
+    /* font: 1.4em Raleway; */
+    font-size: 1.4em;
     padding: 10px 15px;
     position: relative;
     transition: color 0.3s ease;
@@ -781,7 +786,7 @@ div.highlightTextIn a:before
   height: 100%;
   background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
   opacity: 0;
-  transition: opacity 0.3s ease;
+  transition: opacity 0.4s ease;
 }
 
 .grid .text {
@@ -792,8 +797,9 @@ div.highlightTextIn a:before
   text-align: center; /* Center the text */
   color: white;
   opacity: 0;
-  transition: opacity 0.3s ease;
-  z-index: 2; /* Ensure text is above the overlay */
+  transition: opacity 0.5s ease;
+  z-index: 4; /* Ensure text is above the overlay */
+  font-size: 2rem;
 }
 
 .grid > div:hover .overlay,
@@ -892,7 +898,7 @@ p{
 }
  .text > p {
 	 font-weight: 800;
-	 font-size: .8rem;
+	 font-size: 1.0rem;
 	 line-height: 1.25;
 }
  .text > a {
@@ -1445,7 +1451,9 @@ p{
       div.container a {
         /* color: rgb(133, 133, 133); */
         text-decoration: none;
-        font: .95em Raleway;
+        font-family: "Orbitron";
+        /* font: .95em Raleway; */
+        font-size: .95em;
         margin: 0px .5px;
         padding: 10px 10px;
         position: relative;

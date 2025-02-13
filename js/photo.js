@@ -3,12 +3,9 @@
 // let grid = document.getElementById("the--grid");
 // let loadingAnimation = document.getElementById("loading");
 
-
-
 //   grid.classList.remove('loading');
 //   loadingAnimation.classList.add('hide');
 // }
-
 
 // let firstHidden = document.getElementById('imageHiding1');
 // let secondHidden = document.getElementById('imageHiding2');
@@ -35,76 +32,51 @@
 //     seventhHidden.classList.remove('hidden');
 //   }
 
-
 window.onload = function () {
-  let grid = document.getElementById("the--grid");
-  let loadingAnimation = document.getElementById("loading");
+  let grid = document.getElementById('the--grid')
+  let loadingAnimation = document.getElementById('loading')
 
-  // Ensure the grid and loading elements exist
   if (grid && loadingAnimation) {
-    grid.classList.remove("loading"); // Remove loading class from grid
-    loadingAnimation.classList.add("hide"); // Hide the loading wheel
+    grid.classList.remove('loading')
+    loadingAnimation.classList.add('hide')
   }
 
-  // Initialize lazy loading for images
-  initializeLazyLoading();
-};
+  initializeLazyLoading()
+}
 
-// Function to handle lazy loading of images
 function initializeLazyLoading() {
-  const images = document.querySelectorAll(".grid img[data-src]");
+  const images = document.querySelectorAll('.grid img[data-src]')
 
   const loadImage = (img) => {
-    img.src = img.dataset.src; // Set the src from data-src
-    img.classList.add("loaded"); // Add a class to trigger the fade-in effect
-    img.removeAttribute("data-src"); // Remove the data-src attribute
-  };
-
-  const handleIntersection = (entries, observer) => {
-    entries.forEach((entry) => {
-      if (entry.isIntersecting) {
-        loadImage(entry.target); // Load the image
-        observer.unobserve(entry.target); // Stop observing once loaded
-      }
-    });
-  };
-
-  const observer = new IntersectionObserver(handleIntersection, {
-    rootMargin: "0px 0px 100px 0px", // Load images 100px before they come into view
-  });
-
-  images.forEach((img) => {
-    observer.observe(img); // Start observing each image
-  });
-}
-
-// Function to reveal hidden images
-function removeHidden() {
-  const hiddenElements = [];
-
-  // Loop through all hidden elements (up to imageHiding29)
-  for (let i = 1; i <= 29; i++) {
-    const element = document.getElementById(`imageHiding${i}`);
-    if (element && element.classList.contains("hidden")) {
-      hiddenElements.push(element);
-    }
+    img.src = img.dataset.src
+    img.classList.add('loaded')
+    img.removeAttribute('data-src')
   }
 
-  // Remove the "hidden" class from each element
-  hiddenElements.forEach((element) => {
-    element.classList.remove("hidden");
-  });
+  const observer = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        loadImage(entry.target)
+        observer.unobserve(entry.target)
+      }
+    })
+  }, {
+    rootMargin: '0px 0px 100px 0px'
+  })
+
+  images.forEach(img => observer.observe(img))
 }
 
-  hiddenElements.forEach((element) => {
-    if (element && element.classList.contains("hidden")) {
-      element.classList.remove("hidden"); // Reveal the hidden element
+function removeHidden() {
+  for (let i = 1; i <= 29; i++) {
+    const element = document.getElementById(`imageHiding${i}`)
+    if (element && element.classList.contains('hidden')) {
+      element.classList.remove('hidden')
     }
-  });
+  }
+}
 
-
-
-
+document.querySelectorAll('a').forEach(el => el.addEventListener('click', ev => ev.preventDefault()))
 // Body
 
 // // remove hidden
@@ -122,7 +94,7 @@ function removeHidden() {
 //Lazy Load
 
 // if(!!window.IntersectionObserver){
-// 	let observer = new IntersectionObserver((entries, observer) => { 
+// 	let observer = new IntersectionObserver((entries, observer) => {
 // 		entries.forEach(entry => {
 // 		if(entry.isIntersecting){
 // 			console.log(entry);
@@ -137,8 +109,3 @@ function removeHidden() {
 // else document.querySelector('#warning').style.display = 'block';
 // Social Media Icons
 // social
-
-document.
-querySelectorAll("a").
-forEach(el => el.addEventListener("click", ev => ev.preventDefault()));
-  
