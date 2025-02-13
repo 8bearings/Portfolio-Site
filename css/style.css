@@ -51,7 +51,7 @@ footer span {
 }
 
 .about {
-  text-shadow: 2px 3px 7px rgba(120, 255, 255, 0.163), 0 0 1em;
+  text-shadow: 2px 3px 7px rgba(120, 255, 255, 0.163), 0 0 2em;
 }
 
 div.container {
@@ -1210,7 +1210,7 @@ div.highlightTextIn a:before {
   border-radius: 4%;
   color: #2b2b2b;
   box-shadow: 10px 8px 8px 1px;
-  text-shadow: 2px 3px 7px rgba(120, 255, 255, 0.163), 0 0 1em;
+  text-shadow: 2px 3px 7px rgba(120, 255, 255, 0.163), 0 0 2em;
 }
 .projectText {
   font-size: 0.5em;
@@ -1706,8 +1706,8 @@ footer p {
 }
 
 .soc a {
-  height: 6.6rem;
-  width: 6.6rem;
+  height: 5.6rem;
+  width: 6.5rem;
 }
 
 .icon-1:hover,
@@ -2044,7 +2044,7 @@ footer p {
     width: fit-content;
   }
 
-  div.container a {
+  .header-top div.container a {
     /* color: rgb(133, 133, 133); */
     text-decoration: none;
     /* font: 0.55em Raleway; */
@@ -2055,6 +2055,7 @@ footer p {
     z-index: 0;
     cursor: pointer;
   }
+
   div.highlightTextOut a:before,
   div.highlightTextIn a:before {
     position: absolute;
@@ -2117,8 +2118,8 @@ footer p {
     padding-right: 1%;
   }
   .soc a {
-    height: 2.3rem;
-    width: 3.6rem;
+    height: 4rem;
+    width: 4.9rem;
   }
   footer section {
     padding: 0rem 0;
@@ -2246,8 +2247,8 @@ footer p {
     padding-right: 1%;
   }
   .soc a {
-    height: 2.3rem;
-    width: 3.6rem;
+    height: 3.1rem;
+    width: 2.6rem;
   }
   footer section {
     padding: 0rem 0;
