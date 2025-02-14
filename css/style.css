@@ -68,7 +68,7 @@ div.container {
 div.container a {
   color: rgb(133, 133, 133);
   text-decoration: none;
-  font: 1.2em Raleway;
+  font: 1.23em Raleway;
   margin: 0px 20px;
   padding: 7.8px 20px;
   position: relative;
@@ -1556,7 +1556,7 @@ section {
 }
 
 footer {
-  padding: 2rem 0;
+  padding: 1rem 0;
   text-align: center;
 }
 
@@ -2133,6 +2133,19 @@ footer p {
 }
 
 @media screen and (max-width: 550px) {
+  
+  .header-top div.container a {
+    /* color: rgb(133, 133, 133); */
+    text-decoration: none;
+    /* font: 0.55em Raleway; */
+    font-size: 0.65rem;
+    margin: 0px 0.5px;
+    padding: 7px 6px;
+    position: relative;
+    z-index: 0;
+    cursor: pointer;
+  }
+
   .typing-text {
     position: absolute;
     top: 42%;
@@ -2229,6 +2242,7 @@ footer p {
     color: #2b2b2b;
     box-shadow: 10px 8px 8px 1px;
   }
+  
   .soc {
     display: block;
     font-size: 0;
@@ -2238,6 +2252,7 @@ footer p {
     width: 115rem;
     max-width: 100%;
   }
+
   .within {
     width: 100%;
     text-transform: capitalize;
@@ -2247,8 +2262,8 @@ footer p {
     padding-right: 1%;
   }
   .soc a {
-    height: 3.1rem;
-    width: 2.6rem;
+    height: 3.9rem;
+    width: 3.6rem;
   }
   footer section {
     padding: 0rem 0;
@@ -2258,6 +2273,10 @@ footer p {
   }
   .grid > [class*='column-'] {
     padding: 0.5rem;
+  }
+  footer {
+    padding: 0 0;
+    text-align: center;
   }
 }
 
