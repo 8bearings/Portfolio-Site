@@ -2185,7 +2185,19 @@ footer p {
     width: fit-content;
   }
 
-  div.container a {
+  .header-top div.container a {
+    /* color: rgb(133, 133, 133); */
+    text-decoration: none;
+    /* font: 0.65em Raleway; */
+    font-size: 0.6rem;
+    margin: 0px 0.5px;
+    padding: 10px 7px;
+    position: relative;
+    z-index: 0;
+    cursor: pointer;
+  }
+
+ div.container a {
     /* color: rgb(133, 133, 133); */
     text-decoration: none;
     /* font: 0.65em Raleway; */
@@ -2256,7 +2268,7 @@ footer p {
   .within {
     width: 100%;
     text-transform: capitalize;
-    font-size: 1.1em;
+    font-size: 1rem;
     color: #92e6ff;
     text-align: center;
     padding-right: 1%;
